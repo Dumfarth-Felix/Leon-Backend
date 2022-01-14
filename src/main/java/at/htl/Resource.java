@@ -28,7 +28,7 @@ public class Resource {
     @Inject
     FeedbackRepository feedbackRepository;
 
-    String baseURl = "http://leobot.htl-leonding.ac.at/api/";
+    String baseURl = "http://localhost/api/";
 
 
     @GET
