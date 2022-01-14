@@ -31,4 +31,4 @@ jobs:
         run: |
           echo "Hallo ich bin hier"
           ls -l target/
-          scp target/gh-actions-demo-1.0.0-SNAPSHOT-runner.jar ${{ secrets.SERVER_USER }}@${{ secrets.SERVER }}:
+          scp target/leon-1.0.0-SNAPSHOT-runner.jar ${{ secrets.SERVER_USER }}@${{ secrets.SERVER }}:
