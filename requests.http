@@ -39,3 +39,17 @@ GET http://localhost:8080/api/conversations/FE-S-1642008922391
 GET http://localhost:8080/api/conversations/
 Authorization: Basic user user
 
+###
+GET http://localhost:8080/api/feedback
+
+###
+POST http://localhost:8080/api/feedback
+Content-Type: application/json
+
+{
+  "name": "Felix",
+  "rating": 5,
+  "text": "Der Bot ist ja voll cool!"
+}
+
+

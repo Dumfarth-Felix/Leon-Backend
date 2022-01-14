@@ -1,10 +1,16 @@
 package at.htl;
 
+import at.htl.entity.Feedback;
+import at.htl.repository.FeedbackRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.annotation.security.RolesAllowed;
+import javax.inject.Inject;
+import javax.json.JsonObject;
+import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -18,6 +24,9 @@ import java.util.stream.Collectors;
 
 @Path("/api")
 public class Resource {
+
+    @Inject
+    FeedbackRepository feedbackRepository;
 
     String baseURl = "http://leobot.htl-leonding.ac.at/api/";
 
@@ -86,11 +95,25 @@ public class Resource {
 
     @POST
     @Path("/feedback")
+    @Transactional
     @Produces(MediaType.APPLICATION_JSON)
-    public String addFeedback() {
-
-        return "";
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Feedback addFeedback(JsonObject feedbackJson) {
+        String name = feedbackJson.getString("name");
+        String text = feedbackJson.getString("text");
+        int rating = feedbackJson.getInt("rating");
+        Feedback feedback = new Feedback(name,rating,text);
+        feedback.persist();
+        return feedback;
     }
+
+    @GET
+    @Path("/feedback")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Feedback> getFeedback() {
+        return feedbackRepository.listAll();
+    }
+
 
     @GET
     @RolesAllowed("user")
