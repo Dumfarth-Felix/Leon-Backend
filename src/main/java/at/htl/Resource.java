@@ -28,7 +28,7 @@ public class Resource {
     @Inject
     FeedbackRepository feedbackRepository;
 
-    String baseURl = "http://localhost/api/";
+    String baseURl = "http://localhost:4200/api/";
 
 
     @GET
@@ -102,7 +102,7 @@ public class Resource {
         String name = feedbackJson.getString("name");
         String text = feedbackJson.getString("text");
         int rating = feedbackJson.getInt("rating");
-        Feedback feedback = new Feedback(name,rating,text);
+        Feedback feedback = new Feedback(name, rating, text);
         feedback.persist();
         return feedback;
     }
