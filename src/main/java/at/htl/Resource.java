@@ -116,7 +116,6 @@ public class Resource {
 
 
     @GET
-    @RolesAllowed("user")
     @Path("/signin")
     @Produces(MediaType.TEXT_PLAIN)
     public String signIn() {
