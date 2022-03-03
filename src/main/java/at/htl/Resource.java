@@ -134,7 +134,7 @@ public class Resource {
 
         if (Arrays.asList(allowedFileNames).contains(filename)) {
             try {
-                Files.write(Paths.get("META-INF/resources/" +  filename), content.getBytes(StandardCharsets.UTF_8));
+                Files.write(Paths.get(filename), content.getBytes(StandardCharsets.UTF_8));
                 return Response.noContent().build();
             } catch (IOException e) {
                 e.printStackTrace();
