@@ -16,10 +16,10 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Path("/api")
@@ -67,10 +67,10 @@ public class Resource {
         var out = "{\n";
         var i = 1;
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            if (i == map.size()){
-                out += "    \""+entry.getKey() + "\":\"" + entry.getValue() +"\"\n";
-            }else
-            out += "    \""+entry.getKey() + "\":\"" + entry.getValue()+""+"\",\n";
+            if (i == map.size()) {
+                out += "    \"" + entry.getKey() + "\":\"" + entry.getValue() + "\"\n";
+            } else
+                out += "    \"" + entry.getKey() + "\":\"" + entry.getValue() + "" + "\",\n";
             i++;
         }
         out += "}";
@@ -119,8 +119,30 @@ public class Resource {
     @RolesAllowed("user")
     @Path("/signin")
     @Produces(MediaType.TEXT_PLAIN)
-    public String signIn(){
+    public String signIn() {
         return "true";
+    }
+
+    @PUT
+    @RolesAllowed("user")
+    @Path("/file/{filename}")
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response saveFile(@PathParam("filename") String filename, String content) {
+
+        String[] allowedFileNames = {"nlu.yml", "rules.yml", "stories.yml", "config.yml", "domain.yml"};
+
+        if (Arrays.asList(allowedFileNames).contains(filename)) {
+            try {
+                Files.write(Paths.get("src/main/resources/META-INF/resources/" +  filename), content.getBytes(StandardCharsets.UTF_8));
+                return Response.noContent().build();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+            }
+        } else {
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
     }
 
     private String getAuth() throws IOException, InterruptedException {
