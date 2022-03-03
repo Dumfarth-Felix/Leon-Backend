@@ -3,7 +3,7 @@ nlu:
   - intent: greet
     examples: |
       - Grüß Gott!
-      - Guten Tag!
+      - Gluten Tag!
       - Guten Tag bot
       - Guten Tag lieber bot
       - Hallo.
