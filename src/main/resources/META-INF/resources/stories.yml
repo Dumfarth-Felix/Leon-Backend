@@ -1,0 +1,322 @@
+version: "2.0"
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_cant_help
+  - story: name
+    steps:
+      - intent: tell_name
+      - action: action_log_in
+      - action: utter_greet
+  - story: branch
+    steps:
+      - intent: ask_htl_general
+      - action: utter_htl
+      - intent: ask_branches
+      - action: utter_branches
+      - intent: ask_specific_branch
+      - action: action_utter_branch
+  - story: ask for a branch
+    steps:
+      - intent: ask_specific_branch
+      - action: action_utter_branch
+  - story: ask for branches
+    steps:
+      - intent: ask_branches
+      - action: utter_branches
+      - intent: ask_specific_branch
+      - action: action_utter_branch
+  - story: rephrase
+    steps:
+      - intent: nlu_fallback
+      - action: utter_rephrase
+  - story: Story from Conversation ID ccc3836ad30640dba21bb220d28ccf0c
+    steps:
+      - action: action_utter_branch
+      - intent: ask_branches
+      - action: utter_branches
+      - intent: ask_specific_branch
+        entities:
+          - branch: medientechnik
+      - action: action_utter_branch
+  - story: ask about hours per branch
+    steps:
+      - intent: ask_hours_per_branch
+      - action: action_hours_per_branch
+  - story: ask about hours per branch, grade and subject
+    steps:
+      - intent: ask_specific_hours
+      - action: action_hours_per_branch
+  - story: ask about consultation
+    steps:
+      - intent: ask_consultation
+      - action: action_consultation
+  - story: ask about rooms
+    steps:
+      - intent: ask_room
+      - action: action_room_info
+  - story: ask about pre school knowledge
+    steps:
+      - intent: pre_knowledge_for_htl
+      - action: utter_pre_school_knowledge
+  - story: ask about languages teached at the htl
+    steps:
+      - intent: ask_languages_at_htl
+      - action: utter_languages_at_htl
+  - story: ask about difficulty of the htl
+    steps:
+      - intent: ask_htl_difficulty
+      - action: utter_htl_difficulty
+  - story: ask about student homes
+    steps:
+      - intent: ask_student_home
+      - action: utter_student_home
+  - story: ask about whether you have to study after htl or not
+    steps:
+      - intent: ask_study_after_htl
+      - action: utter_study_after_htl
+  - story: ask about htl age
+    steps:
+      - intent: ask_htl_age
+      - action: utter_htl_age
+  - story: ask about number of teachers
+    steps:
+      - intent: ask_number_of_teachers
+      - action: action_number_of_teachers
+  - story: ask about number of classes
+    steps:
+      - intent: ask_number_of_classes
+      - action: action_number_of_classes
+  - story: ask about number of students
+    steps:
+      - intent: ask_number_of_students
+      - action: action_number_students
+  - story: ask about holidays
+    steps:
+      - intent: ask_holidays
+      - action: action_get_holidays
+  - story: ask about contact information
+    steps:
+      - intent: ask_contact
+      - action: utter_contact
+  - story: ask about Rasa X
+    steps:
+      - intent: ask_faq_rasax
+      - action: utter_rasa_x
+  - story: ask about channels
+    steps:
+      - intent: ask_faq_channels
+      - action: utter_faq_channels
+  - story: ask about community size
+    steps:
+      - intent: ask_faq_community_size
+      - action: utter_faq_community_size
+  - story: ask about ee
+    steps:
+      - intent: ask_faq_ee
+      - action: utter_faq_ee
+  - story: ask about programming required
+    steps:
+      - intent: ask_faq_is_programming_required
+      - action: utter_faq_is_programming_required
+  - story: ask about opensource cost
+    steps:
+      - intent: ask_faq_opensource_cost
+      - action: utter_faq_open_source_cost
+  - story: ask about tutorials
+    steps:
+      - intent: ask_faq_tutorials
+      - action: utter_faq_tutorials
+  - story: ask about python version
+    steps:
+      - intent: ask_faq_python_version
+      - action: utter_faq_python
+  - story: ask about slots
+    steps:
+      - intent: ask_faq_slots
+      - action: utter_faq_slots
+  - story: ask about tutorial for core
+    steps:
+      - intent: ask_faq_tutorialcore
+      - action: utter_faq_tutorialcore
+  - story: ask about tutorial for nlu
+    steps:
+      - intent: ask_faq_tutorialnlu
+      - action: utter_faq_tutorialnlu
+  - story: ask about languages
+    steps:
+      - intent: ask_faq_languages
+      - action: utter_faq_languages
+  - story: ask about opensource
+    steps:
+      - intent: ask_faq_opensource
+      - action: utter_faq_open_source_cost
+  - story: ask about voice control
+    steps:
+      - intent: ask_faq_voice
+      - action: utter_faq_voice
+  - story: ask about what is forum
+    steps:
+      - intent: ask_faq_what_is_forum
+      - action: utter_faq_what_is_forum
+  - story: say that cant helo
+    steps:
+      - intent: cant_help
+      - action: utter_cant_help
+  - story: utter human handoff
+    steps:
+      - intent: human_handoff
+      - action: utter_human_handoff
+  - story: tell a joke
+    steps:
+      - intent: tell_joke
+      - action: action_tell_joke
+  - story: tell about pipeline
+    steps:
+      - intent: ask_pipeline
+      - action: utter_pipeline
+  - story: ask if good grades are required
+    steps:
+      - intent: good_grades_required
+      - action: utter_good_grades_required
+  - story: ask if you can prepare for htl
+    steps:
+      - intent: prepare_for_htl
+      - action: utter_prepare_for_htl
+  - story: ask which branch to choose
+    steps:
+      - intent: which_branch_to_choose
+      - action: utter_which_branch_to_choose
+  - story: ask about programming after the first grade
+    steps:
+      - intent: programming_after_first_grade
+      - action: utter_programming_after_first_grade
+  - story: ask about number of girls at school
+    steps:
+      - intent: girls_count_at_school
+      - action: utter_girls_count_at_school
+  - story: ask about voluntary subjects
+    steps:
+      - intent: voluntary_subjects
+      - action: utter_voluntary_subjects
+  - story: ask about average class size
+    steps:
+      - intent: average_class_size
+      - action: utter_average_class_size
+  - story: ask about classes per grade
+    steps:
+      - intent: classes_per_grade
+      - action: utter_classes_per_grade
+  - story: ask about programming languages
+    steps:
+      - intent: programming_languages
+      - action: utter_programming_languages
+  - story: ask about workshops and labours
+    steps:
+      - intent: workshops_and_labours
+      - action: utter_workshops_and_labours
+  - story: ask about difference to other schools
+    steps:
+      - intent: difference_to_other_schools
+      - action: utter_difference_to_other_schools
+  - story: ask about social education
+    steps:
+      - intent: social_education
+      - action: utter_social_education
+  - story: ask about economy subject
+    steps:
+      - intent: economy_subject
+      - action: utter_economy_subject
+  - story: ask about pe lessons for girls
+    steps:
+      - intent: pe_for_girls
+      - action: utter_pe_for_girls
+  - story: ask about girls connection
+    steps:
+      - intent: girls_connection
+      - action: utter_girls_connection
+  - story: ask about mood at school
+    steps:
+      - intent: mood_at_school
+      - action: utter_mood_at_school
+  - story: ask about appliance for school
+    steps:
+      - intent: apply_for_school
+      - action: utter_apply_for_school
+  - story: ask about school equipment
+    steps:
+      - intent: school_equipment
+      - action: utter_school_equipment
+  - story: ask about jobs after htl
+    steps:
+      - intent: jobs_after_htl
+      - action: utter_jobs_after_htl
+  - story: ask about school in the afternoon
+    steps:
+      - intent: school_in_the_afternoon
+      - action: utter_school_in_the_afternoon
+  - story: ask about internships during htl
+    steps:
+      - intent: internship_for_htl
+      - action: utter_internship_for_htl
+  - story: ask about duration of htl
+    steps:
+      - intent: htl_duration
+      - action: utter_htl_duration
+  - story: ask about peers at school
+    steps:
+      - intent: peers_at_school
+      - action: utter_peers_at_school
+  - story: ask about probability of appliance
+    steps:
+      - intent: appliance_probability
+      - action: utter_appliance_probability
+  - story: ask about needed equipment
+    steps:
+      - intent: equipment_needed
+      - action: utter_equipment_needed
+  - story: ask about trips during school
+    steps:
+      - intent: trips_during_school
+      - action: utter_trips_during_school
+  - story: ask about lunch at school
+    steps:
+      - intent: lunch_at_school
+      - action: utter_lunch_at_school
+  - story: ask about school autonomous priorities
+    steps:
+      - intent: school_autonomous_priorities
+      - action: utter_school_autonomous_priorities
+  - story: ask about public transport connection
+    steps:
+      - intent: public_transport_connection
+      - action: utter_public_transport_connection
+  - story: ask about time
+    steps:
+      - intent: what_time_is_it
+      - action: action_what_time_is_it
+  - story: ask about date
+    steps:
+      - intent: what_date_is_it
+      - action: action_what_date_is_it

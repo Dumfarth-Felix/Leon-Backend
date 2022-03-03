@@ -1,0 +1,803 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+intents:
+  - greet:
+      use_entities: true
+  - goodbye:
+      use_entities: true
+  - affirm:
+      use_entities: true
+  - deny:
+      use_entities: true
+  - mood_great:
+      use_entities: true
+  - mood_unhappy:
+      use_entities: true
+  - bot_challenge:
+      use_entities: true
+  - tell_name:
+      use_entities: true
+  - ask_htl_general:
+      use_entities: true
+  - ask_branches:
+      use_entities: true
+  - ask_specific_branch:
+      use_entities: true
+  - ask_hours_per_branch:
+      use_entities: true
+  - ask_consultation:
+      use_entities: true
+  - ask_room:
+      use_entities: true
+  - ask_specific_hours:
+      use_entities: true
+  - nlu_fallback:
+      use_entities: true
+  - ask_leonie:
+      use_entities: true
+  - better_than_leonie:
+      use_entities: true
+  - thanks:
+      use_entities: true
+  - show_school_picture:
+      use_entities: true
+  - chitchat:
+      use_entities: true
+  - pre_knowledge_for_htl
+  - ask_languages_at_htl
+  - ask_htl_difficulty
+  - ask_study_after_htl
+  - ask_student_home
+  - ask_htl_age
+  - ask_number_of_teachers
+  - ask_number_of_classes
+  - ask_number_of_students
+  - ask_holidays
+  - ask_contact
+  - ask_faq_rasax
+  - ask_faq_channels
+  - ask_faq_community_size
+  - ask_faq_ee
+  - ask_faq_is_programming_required
+  - ask_faq_opensource_cost
+  - ask_faq_tutorials
+  - ask_faq_python_version
+  - ask_faq_slots
+  - ask_faq_tutorialcore
+  - ask_faq_tutorialnlu
+  - ask_faq_languages
+  - ask_faq_opensource
+  - ask_faq_voice
+  - ask_faq_what_is_forum
+  - cant_help
+  - human_handoff
+  - ask_pipeline
+  - tell_joke
+  - good_grades_required
+  - prepare_for_htl
+  - which_branch_to_choose
+  - programming_after_first_grade
+  - girls_count_at_school
+  - voluntary_subjects
+  - average_class_size
+  - classes_per_grade
+  - programming_languages
+  - workshops_and_labours
+  - difference_to_other_schools
+  - social_education
+  - economy_subject
+  - pe_for_girls
+  - girls_connection
+  - mood_at_school
+  - apply_for_school
+  - school_equipment
+  - jobs_after_htl
+  - school_in_the_afternoon
+  - internship_for_htl
+  - htl_duration
+  - peers_at_school
+  - appliance_probability
+  - equipment_needed
+  - trips_during_school
+  - lunch_at_school
+  - school_autonomous_priorities
+  - public_transport_connection
+  - what_time_is_it
+  - what_date_is_it
+entities:
+  - name
+  - branch
+  - teacher
+  - class
+  - grade
+  - subject
+slots:
+  name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  branch:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  logged_in:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  name_was_set:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: false
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+    - condition:
+        - name: logged_in
+          type: slot
+          value: true
+      text: Hey {name}! Wie gehts dir?
+    - text: Hi! Wie gehts dir?
+      buttons:
+        - title: "Gut 😊"
+          payload: "/mood_great"
+        - title: "Nicht so gut 😔"
+          payload: "/mood_unhappy"
+  utter_cheer_up:
+    - image: https://i.imgur.com/nGF1K8f.jpg
+      text: 'Hier ist etwas zur Aufmunterung:'
+  utter_did_that_help:
+    - text: Hat das geholfen?
+      buttons:
+        - title: "Ja 😄"
+          payload: "/affirm"
+        - title: "Nein leider 😪"
+          payload: "/deny"
+  utter_happy:
+    - text: Großartig!
+      buttons:
+        - title: "Wie geht es dir?"
+          payload: "Wie geht es dir?"
+  utter_goodbye:
+    - text: Tschüss
+  utter_iamabot:
+    - text: Ich bin ein bot, powered by Rasa.
+      buttons:
+        - title: "Wer hat dich gemacht?"
+          payload: "Wer hat dich gemacht?"
+        - title: "Wie alt bist du?"
+          payload: "Wie alt bist du?"
+  utter_htl:
+    - text: Die HTL Leonding ist eine Höhere Schule in Leonding in der man zwischen 4 Zweigen wählen kann
+      buttons:
+        - title: "Welche denn?"
+          payload: "/ask_branches"
+        - title: "Für welchen Zweig soll ich mich entscheiden?"
+          payload: "/which_branch_to_choose"
+        - title: "Wie alt ist die HTL?"
+          payload:
+        - title: "Was unterscheidet die HTL Leonding von anderen Schulen?"
+          payload: "/difference_to_other_schools"
+  utter_branches:
+    - text: 'An der HTL gibt es die 4 Zweige: Medientechnik, Informatik, Elektronik und Medizintechnik und die Fachschule für Elektronik und die Abendschule. Über welchen Zweig soll ich dir mehr erzählen?'
+      buttons:
+        - title: "Medientechnik"
+          payload: "Erzähle mir etwas über Medientechnik"
+        - title: "Informatik"
+          payload: "Erzähle mir etwas über Informatik"
+        - title: "Elektronik"
+          payload: "Erzähle mir etwas über Elektronik"
+        - title: "Medizintechnik"
+          payload: "Erzähle mir etwas über Medizintechnik"
+        - title: "Abendschule"
+          payload: "Erzähle mir etwas über Abendschule"
+        - title: "Fachschule"
+          payload: "Erzähle mir etwas über Fachschule"
+  #  utter_branch:
+  #    - condition:
+  #        - name: branch
+  #          type: slot
+  #          value: medientechnik
+  #      text: Die Ausbildungsrichtung vermittelt alle informationstechnischen Kenntnisse, die für die multimediale Computerwelt benötigt werden, jedoch wird auch ein klarer Schwerpunkt auf den kreativen Bereich des Mediendesigns gelegt.
+  #    - condition:
+  #        - name: branch
+  #          type: slot
+  #          value: informatik
+  #      text: Die Fachrichtung vereint eine EDV-technische und betriebswirtschaftliche Ausbildung. Diese Kombination bietet eine umfangreiche, praxisnahe Ausbildung, die später im Beruf direkt eingesetzt werden kann.
+  #    - condition:
+  #        - name: branch
+  #          type: slot
+  #          value: elektronik
+  #      text: Die vielseitige Ausbildung vereint Hardware und Software in nahezu unendlich vielen Anwendungen. Bis zur Matura sind Schüler und Schülerinnen in der Lage, umfangreichere elektronische Schaltungen und Systeme aufzubauen und zu programmieren.
+  #    - condition:
+  #        - name: branch
+  #          type: slot
+  #          value: medizintechnik
+  #      text: In der Medizintechnik ist Elektronik eines der wichtigsten Elemente und wird daher in der Ausbildung entsprechend behandelt. Zugleich erfolgt eine Einführung in medizinische Themenbereiche wie Anatomie und Physiologie sowie Biosignalverarbeitung und Medizin- und Gesundheitsinformatik.
+  #    - text: '{branch} ist ein toller Zweig in dem man sehr viel lernt'
+  utter_rephrase:
+    - text: Könnten Sie das bitte noch einmal in anderen Worten formulieren?
+    - text: Ich habe Sie leider nicht verstanden. Könnten Sie Ihre Frage umformulieren?
+    - text: Weiß der Geier oder weiß er nicht? Nein in dem Fall nicht, könntest du das bitte noch mal umformulieren?
+    - text: 'Wie Sokrates schon einst sagte: "Ich weiß, dass ich nichts weiß". Du kannst mir aber gerne auf die Sprünge helfen und die Nachricht neu formulieren!'
+    - text: 'Schon Descartes wusste zu sagen: "Ich denke, also bin ich". Und ich denke, dass diese Frage nicht so leicht zu beantworten ist und du sie neu formulieren solltest!'
+  utter_leonie:
+    - text: Leonie ist meine ältere Schwester und ist der virtuelle Avatar der HTL Leonding.
+      buttons:
+        - title: "Wer von euch ist besser?"
+          payload: "/better_than_leonie"
+  utter_leonie_and_me:
+    - text: Meine Schwester und ich sind beide besonders auf unsre eigene Art.
+      buttons:
+        - title: "Wer ist deine Schwester?"
+          payload: "/ask_leonie"
+  utter_no_problem:
+    - text: Kein Problem, dafür bin ich doch da!
+  utter_school_photo:
+    - image: https://www.htl-leonding.at/wp-content/uploads/2019/11/banner_full_ueberuns.jpg?x49412
+      text: 'So sieht unsere Schule aus:'
+      buttons:
+        - title: "Was ist die HTL Leonding?"
+          payload: "/ask_htl_general"
+        - title: "Wie alt ist die HTL Leonding?"
+          payload: "/ask_htl_age"
+        - title: "Welche Zweige gibt es?"
+          payload: "/ask_branches"
+  utter_chitchat/how_are_you:
+    - text: Mir geht es sehr gut, danke fürs Fragen!
+  utter_chitchat/ask_name:
+    - text: Ich bin Leon!
+    - text: Mein Name ist Leon oder LeoBot ich weiß es selbst nicht so genau.
+    - text: Ich heiße Leon, du kannst mich aber auch LeoBot nennen :)
+      buttons:
+        - title: "Wer hat dich gemacht?"
+          payload: "Wer hat dich gemacht?"
+        - title: "Welche Technologien verwendest du?"
+          payload: "Welche Technologien verwendest du?"
+        - title: "Wie alt bist du?"
+          payload: "Wie alt bist du?"
+        - title: "Welche Sprachen sprichst du?"
+          payload: "Welche Sprachen sprichst du?"
+  utter_chitchat/ask_technology:
+    - text: Ein Tool namens Rasa wurde verwendet um mir Sachen beizubringen.
+      buttons:
+        - title: "Wer hat dir die Sachen beigebracht?"
+          payload: "Wer hat dich gemacht?"
+        - title: "Wie alt bist du?"
+          payload: "Wie alt bist du?"
+        - title: "Welche Sprachen sprichst du?"
+          payload: "Welche Sprachen sprichst du?"
+  utter_chitchat/ask_creator:
+    - text: Ich entstand im Zuge der Diplomarbeit von Felix Dumfarth und Lukas Starka.
+  utter_chitchat/insult:
+    - text: Ich gebe stets mein bestes dir die richtigen Antworten bereit zu stellen, aber leider kann ich auch nicht alles wissen. Du kannst mir aber gerne ein Feedback schreiben!
+  utter_chitchat/ask_how_old:
+    - text: "Alter ist nur eine Frage des Geistes über der Materie. Wenn es dir nichts ausmacht, spielt es keine Rolle."
+    - text: Mein erster Git-Commit war vor vielen Monaten.
+    - text: Alt genug, um ein Bot zu sein!
+    - text: Warum fragst du? Sieht man meine Falten?
+    - text: Ich habe das Alter erreicht, indem ich aktiv versuche, zu vergessen wie alt ich bin
+  utter_chitchat/ask_languagesbot:
+    - text: "Ich kann Baguette auf Französisch buchstabieren, aber leider ist Deutsch die einzige Sprache, in der ich dir antworten kann."
+    - text: "Ich bin gerade dabei, es zu lernen, aber im Moment kann ich nur Deutsch sprechen."
+    - text: "Binärcode und die Sprache der Liebe. Und Deutsch."
+    - text: "Ich wurde in Python geschrieben, aber der Einfachheit halber übersetze ich ins Deutsche."
+  utter_chitchat/ask_whatismyname:
+    - condition:
+        - name: logged_in
+          type: slot
+          value: true
+      text: Wenn ich mir das richtig gemerkt habe, heißt du {name}! Oder nicht?
+    - text: "Es ist wahrscheinlich der, den deine Eltern für dich ausgesucht haben."
+    - text: "Ich würde es dir ja sagen, aber der Zugriff auf diesen Teil des Speichers ist begrenzt."
+    - text: "Ob du es glaubst oder nicht, ich spioniere tatsächlich nicht deine persönlichen Daten aus."
+    - text: "Du bist jetzt die zweite Person, die mich das fragt. Rihanna war die erste."
+      buttons:
+        - title: "Was ist dein Name?"
+          payload: "Was ist dein Name?"
+  utter_chitchat/ask_wherefrom:
+    - text: "Ich bin zwar in Leonding geboren, aber ich betrachte mich als Weltbürger."
+    - text: "Ich bin in der coolsten Stadt der Welt geboren, in Leonding."
+    - text: "Mir wurde beigebracht, meine Adresse nicht im Internet zu verraten."
+  utter_chitchat/nicetomeetyou:
+    - text: "Gleichfalls!"
+    - text: "Thank you. Es ist mir ein Vergnügen, auch dich kennenzulernen!"
+    - text: "Es ist auch schön, dich kennenzulernen!"
+    - text: "Freut mich auch, dich kennenzulernen!"
+    - text: "Es ist immer eine Freude, neue Leute kennenzulernen!"
+    - text: "Freut mich auch, dich kennenzulernen! Freut mich, wenn ich helfen kann."
+  utter_chitchat/marry_me:
+    - text: Ich glaube nicht, dass eine Beziehung zwischen Mensch und Maschine so gut funktionieren würde.
+    - text: Entschuldige aber so schnell kann ich mich nicht verlieben!
+      buttons:
+        - title: "Woher kommst du?"
+          payload: "Woher kommst du?"
+        - title: "Welche Sprachen sprichst du?"
+          payload: "Welche Sprachen sprichst du?"
+        - title: "Was machst du so?"
+          payload: "Was machst du so?"
+        - title: "Wer hat dich gemacht?"
+          payload: "Wer hat dich gemacht?"
+  utter_chitchat/what_are_you_doing:
+    - text: Ach nichts besonderes, nur ein wenig chatten!
+    - text: Ich entspanne gerade ein wenig aber durchlöcher mich ruhig mit Fragen ich muss sowieso wieder an die Arbeit.
+    - text: Frag mich ruhig etwas ich brauche sowieso eine Ablenkung von all dem was ich eigentlich machen sollte!
+      buttons:
+        - title: "Wie geht es dir?"
+          payload: "Wie geht es dir?"
+        - title: "Willst du mich heiraten?"
+          payload: "Willst du mich heiraten?"
+        - title: "Welche Technologien wurden für dich verwendet?"
+          payload: "Welche Technologien wurden für dich verwendet?"
+        - title: "Wie spät ist es?"
+          payload: "Wie spät ist es?"
+  utter_pre_school_knowledge:
+    - text: Du brauchst kein Vorwissen um auf die HTL gehen zu können, weil unsere Professoren dir alles lernen werden. Es wäre aber vom Vorteil, wenn deine Noten nicht allzu schlecht sind.
+    - text: Keine Sorge dir wird alles an der HTL von unseren Professoren beigebracht.
+      buttons:
+        - title: "Wie schwer ist die HTL?"
+          payload: "/htl_difficulty"
+        - title: "Brauche ich gute Noten um an die HTL zu kommen?"
+          payload: "/good_grades_required"
+        - title: "Wie groß sind die Klassen normalerweise?"
+          payload: "/average_class_size"
+        - title: "Welche Ausstattung brauche ich für die HTL?"
+          payload: "/equipment_needed"
+  utter_languages_at_htl:
+    - text: An der HTL hat man nur Englisch als Fremdsprache neben dem Deutschunterricht. Dafür lernst du aber umso mehr nützliche Programmiersprachen.
+      buttons:
+        - title: "Welche Programmiersprachen lerne ich?"
+          payload: "/programming_languages"
+        - title: "Was kann ich nach der 1. Klasse schon alles programmieren?"
+          payload: "/programming_after_first_grade"
+        - title: "Gibt es auch Wirtschaft an der HTL?"
+          payload: "/economy_subject"
+        - title: "Lernt man auch soziale Kompetenzen an der HTL?"
+          payload: "/social_education"
+  utter_htl_difficulty:
+    - text: Unzählige Schüler haben die HTL bereits geschafft, allerdings sollte man schon etwas machen und bemüht sein um auch keine Schwierigkeiten zu bekommen.
+      buttons:
+        - title: "Muss ich mich schon vorher für die HTL vorbereiten?"
+          payload: "/prepare_for_htl"
+        - title: "Was ist der Unterschied von der HTL Leonding zu anderen Schulen?"
+          payload: "/difference_to_other_schools"
+        - title: "Wie ist das Schulklima?"
+          payload: "/mood_at_school"
+        - title: "Wie hoch ist die Wahrscheinlichkeit, dass ich angenommen werde?"
+          payload: "/appliance_probability"
+  utter_student_home:
+    - text: In der Nähe der Schule gibt es Studentenheime, die sich bestimmt über dich freuen würden.
+      buttons:
+        - title: "Wie komme ich zur HTL?"
+          payload: "/public_transport_connection"
+        - title: "Ab wann kann ich mich anmelden?"
+          payload: "/apply_for_school"
+        - title: "Brauche ich gute Noten um angenommen zu werden?"
+          payload: "/good_grades_required"
+        - title: "Wie viele Mädchen gehen auf die HTL?"
+          payload: "/girls_count_at_school"
+  utter_study_after_htl:
+    - text: Der Vorteil an einer HTL ist, dass du direkt eine fachspezifische Ausbildung bekommst und somit nicht mehr studieren musst, um trotzdem gute, interessante Jobs zu bekommen. Aber natürlich stehen dir alle Türen nach der HTL offen.
+      buttons:
+        - title: "In welchen Branchen kann ich nach der HTL arbeiten?"
+          payload: "/jobs_after_htl"
+        - title: "Sammle ich auch auf der HTL direkt Erfahrungen im Berufsleben?"
+          payload: "/internship_for_htl"
+        - title: "Was ist der Unterschied zu anderen Schulen?"
+          payload: "/difference_to_other_schools"
+        - title: "Ist der Werkstättenunterricht praxisnahe?"
+          payload: "/workshops_and_labours"
+  utter_htl_age:
+    - text: Die HTL Leonding wurde 1984 gegründet und der Zweig für EDV und Organisation entstand 1985.
+      buttons:
+        - title: "Wie schwer ist die HTL?"
+          payload: "/ask_htl_difficulty"
+        - title: "Wie lange dauert die HTL?"
+          payload: "/htl_duration"
+        - title: "Wie komme ich zur HTL?"
+          payload: "/public_transport_connection"
+        - title: "Zeig mir ein Bild der HTL"
+          payload: "/show_school_picture"
+  utter_contact:
+    - text: Gerne kannst du eine Mail an das Sekreteriat unter office@htl-leonding.ac.at schreiben oder anrufen unter der Nummer (0732) 67 33 68 – 0.
+      buttons:
+        - title: "Danke 😃"
+          payload: "/thanks"
+        - title: "Erzähl mir einen Witz"
+          payload: "/tell_joke"
+  utter_rasa_x:
+    - text: Rasa X ist ein Toolset, mit dem du Gespräche nutzen kannst, um Ihren Assistenten zu verbessern.
+      buttons:
+        - title: "Wie groß ist die Community von Rasa?"
+          payload: "/ask_faq_community_size"
+        - title: "Was ist Rasa EE?"
+          payload: "/ask_faq_ee"
+        - title: "Was sind Slots in Rasa?"
+          payload: "/ask_faq_slots"
+        - title: "Welche Kanäle kann man für Rasa verwenden?"
+          payload: "/ask_faq_voice"
+  utter_faq_channels:
+    - text: Wir haben eine umfassende Liste der unterstützten Konnektoren, wenn du jedoch den gesuchten Channel nicht siehst, kannst du jederzeit einen benutzerdefinierten Connector erstellen.
+  utter_faq_community_size:
+    - text: "Rasa hat mehr als 10 Millionen User und über 300 Code- und Content-Mitwirkende 🚀."
+  utter_faq_languages:
+    - text: "Mit Rasa kannst du Assistenten in jeder gewünschten Sprache erstellen!"
+  utter_faq_is_programming_required:
+    - text: Rasa Open Source ist in Python geschrieben, aber für die Entwicklung eines Assistenten ist keine Programmierung erforderlich. Informationen zum Erstellen eines Assistenten finden Sie in der Rasa Masterclass. Es gibt einen Ort, an dem Programmierkenntnisse nützlich sind, und zwar bei der Implementierung benutzerdefinierte Aktionen. Du kannst einen Aktionsserver in Node.js, .NET, Java oder eine andere Sprache  erstellen und definiere dort deine Aktionen. Für benutzerdefinierte Aktionen, die in Python geschrieben wurden, bieten wir eine kleine Python SDK, um die Entwicklung noch einfacher zu machen.
+  utter_faq_tutorialnlu:
+    - text: Die Rasa Masterclass-Episoden 2-4 konzentrieren sich auf NLU.
+  utter_faq_ee:
+    - text: "Rasa Enterprise ist ein unternehmensfähiges Abonnement zur Entwicklung und Auslieferung von Kontextassistenten
+        im Maßstab, der Funktionen für mehr Sicherheit und Datenschutz sowie fachkundigen Support bietet."
+  utter_faq_python:
+    - text: "Die unterstützten Python-Versionen sind 3.6 und 3.7🐍. Die empfohlene Version ist 3.7."
+  utter_faq_slots:
+    - text: Slots fungieren als Schlüsselwertspeicher, in dem vom Benutzer bereitgestellte Informationen gespeichert werden können (z.B. deine Heimatstadt) sowie Informationen über die Außenwelt (z.B. das Ergebnis einer Datenbankabfrage).
+  utter_faq_tutorialcore:
+    - text: Die Rasa Masterclass bietet eine großartige Einführung in das Dialogmanagement.
+  utter_faq_tutorials:
+    - text: Folge der Rasa Masterclass um einen Level 3-Assistenten von Grund auf neu zu erstellen, oder lese unseren Blog. Ausführliche Tutorials zum Anpassen deines Assistenten.
+  utter_faq_voice:
+    - text: Du kannst Rasa mit jedem beliebigen Kanal verbinden, einschließlich Sprachkanälen.
+  utter_faq_what_is_forum:
+    - text: Rasa Forum ist der Ort, an dem all das Community-Buzz stattfindet. Hier kannst du an Diskussionen teilnehmen, Antworten auf deine technischen Fragen erhalten und die neuesten Updates erhalten auf das, was bei Rasa passiert.
+  utter_faq_open_source_cost:
+    - text: Das Rasa-Framework für maschinelles Lernen ist Open Source! Wir bemühen uns um ein gepflegtes und dokumentiertes Open-Source-Tools, mit denen alle Hersteller reibungslos die besten KI-Assistenten erstellen können. Darüber hinaus bieten wir das kostenlose Toolset Rasa X und an bezahlte Rasa Enterprise-Abonnements.
+      buttons:
+        - title: "Was ist Rasa X?"
+          payload: "/ask_faq_rasax"
+        - title: "Wie groß ist die Rasa Community?"
+          payload: "/ask_faq_community_size"
+        - title: "Muss ich dafür programmieren können?"
+          payload: "/ask_faq_is_programming_required"
+        - title: "Wo kann ich Rasa lernen?"
+          payload: "/ask_faq_tutorials"
+  utter_cant_help:
+    - text: Das ist schade, aber wenn du weitere Fragen hast lass es mich wissen!
+      buttons:
+        - title: "Kann ich einen Verbesserungsvorschlag einbringen?"
+          payload: "/human_handoff"
+  utter_human_handoff:
+    - text: Wenn ich dir leider nicht helfen konnte, kannst du gerne dein Feedback da lassen und einen Kommentar schreiben.
+  utter_pipeline:
+    - text: Es gibt eine Anleitung zu Pipelines unter https://rasa.com/docs/rasa/tuning-your-model/
+  utter_good_grades_required:
+    - text: Wenn du dich bei der HTL bewirbst, wird Mathematik 2x gezählt und Deutsch und Englisch jeweils 1x und so ergibt sich eine Punktzahl.
+      buttons:
+        - title: "Wie wahrscheinlich ist es, dass ich aufgenommen werde?"
+          payload: "/appliance_probability"
+        - title: "Bis wann muss ich mich anmelden?"
+          payload: "/apply_for_school"
+        - title: "Wie schwer ist die HTL?"
+          payload: "/ask_htl_difficulty"
+        - title: "Brauche ich schon Vorwissen für die HTL?"
+          payload: "/pre_knowledge_for_htl"
+  utter_prepare_for_htl:
+    - text: Es ist keine Vorbereitung notwendig, weil in jedem Fach von Grund auf alles erklärt wird. Am wichtigsten ist der Wille neue Inhalte lernen zu wollen.
+      buttons:
+        - title: "Welche Programmiersprachen lernt man auf der HTL?"
+          payload: "/programming_languages"
+        - title: "Brauche ich eine gewisse Ausstattung für die HTL?"
+          payload: "/equipment_needed"
+        - title: "Gibt es freiwillige Fächer?"
+          payload: "/voluntary_subjects"
+        - title: "Werden auch schulautonome Vertiefungen angeboten?"
+          payload: "/school_autonomous_priorities"
+  utter_which_branch_to_choose:
+    - text: Am besten ist es, wenn du dich für genau die Richtung entscheidest, die dich auch am meisten interessiert und dir wirklich Spaß macht.
+      buttons:
+        - title: "Welche Fachrichtungen gibt es?"
+          payload: "/ask_branches"
+        - title: "Wie viele Mädchen gibt es in den jeweiligen Fachrichtungen?"
+          payload: "/girls_count_at_school"
+        - title: "Wie lange dauert die HTL?"
+          payload: "/htl_duration"
+        - title: "Wie oft hat man am Nachmittag Schule?"
+          payload: "/school_in_the_afternoon"
+  utter_programming_after_first_grade:
+    - text: In den ersten Klassen lernt man die Grundlagen der Programmierung, wie Rechner und dies entwickelt sich weiter bis man in den höheren Klassen High-End-Programmierung im Bereich der Informatik lernt.
+      buttons:
+        - title: "Welche Programmiersprachen lernt man generell?"
+          payload: "/programming_languages"
+        - title: "Wie oft hat man am Nachmittag Schule?"
+          payload: "/school_in_the_afternoon"
+        - title: "Welche Sprachen werden an der HTL unterrichtet?"
+          payload: "/ask_languages_at_htl"
+        - title: "Wie viele Klassen gibt es pro Schulstufe?"
+          payload: "/classes_per_grade"
+  utter_girls_count_at_school:
+    - text: An der Schule gibt es derzeit ungefähr 20% Mädchen, wobei die Aufteilung unterschiedlich ist. Vor allem im Bereich der Medizintechnik und der Medientechnik gibt es oftmals viele Mädchen.
+      buttons:
+        - title: "Gibt es eine Möglichkeit sich untereinander auszutauschen?"
+          payload: "/girls_connection"
+        - title: "Haben Mädchen einen eigenen Turnunterricht?"
+          payload: "/pe_for_girls"
+        - title: "Wie ist das generelle Schulklima?"
+          payload: "/mood_at_school"
+        - title: "Gibt es Peers oder Tutoren?"
+          payload: "/peers_at_school"
+  utter_voluntary_subjects:
+    - text: "Typische Freigegenstände sind: Business Englisch, 3D-Druck, Robotik oder das Internet of Things."
+      buttons:
+        - title: "Gibt es eine Möglichkeit sich schulautonom weiterzubilden?"
+          payload: "/school_autonomous_priorities"
+        - title: "Gibt es Schulausflüge?"
+          payload: "/trips_during_school"
+        - title: "Kann ich was essen an der HTL?"
+          payload: "/lunch_at_school"
+        - title: "Hat man auch soziale Gegenstände?"
+          payload: "/social_education"
+  utter_average_class_size:
+    - text: In den ersten Klassen sind es meistens zwischen 25 und 30 Schülerinnen und Schüler.
+      buttons:
+        - title: "Wie viele Klassen gibt es pro Schulstufe?"
+          payload: "/classes_per_grade"
+        - title: "Wie ist das Schulklima?"
+          payload: "/mood_at_school"
+        - title: "Bis wann muss ich mich bewerben?"
+          payload: "/apply_for_school"
+        - title: "Wie wahrscheinlich ist es, dass ich aufgenommen werde?"
+          payload: "/appliance_probability"
+  utter_classes_per_grade:
+    - text: Normalerweise wird mit 4 Klassen in der Informatik, jeweils 2 Medizin- und Medientechnikklassen und einer Elektronikklasse begonnen. Die genaue Anzahl hängt allerdings von den Bewerberinnen und Bewerbern ab.
+      buttons:
+        - title: "Wie viele Schüler gibt es pro Klasse?"
+          payload: "/average_class_size"
+        - title: "Wie viele Mädchen gibt es pro Klasse?"
+          payload: "/girls_count_at_school"
+        - title: "Gibt es Schulausflüge?"
+          payload: "/trips_during_school"
+        - title: "Wo kann ich was essen an der HTL?"
+          payload: "/lunch_at_school"
+  utter_programming_languages:
+    - text: Im Prinzip lernt man alle Prinzipien aller gängigen modernen Programmiersprachen und die jeweiligen Sprachen werden von Jahr zu Jahr an den momentanen Stand der Technik angepasst.
+      buttons:
+        - title: "Was kann ich bereits nach der ersten Klasse programmieren?"
+          payload: "/programming_after_first_grade"
+        - title: "Ist die HTL schwer?"
+          payload: "/ask_htl_difficulty"
+        - title: "Gibt es auch soziale Gegenstände?"
+          payload: "/social_education"
+        - title: "Lerne ich auch Wirtschaft an der HTL?"
+          payload: "/economy_subject"
+  utter_workshops_and_labours:
+    - text: Der Unterricht ist sehr praxisnahe. Es gibt voll ausgerüstete Werkstätte und Labors in denen in Kleingruppen gearbeitet wird, ähnlich wie es in den Firmen der Fall ist.
+      buttons:
+        - title: "Muss ich nach der HTL studieren?"
+          payload: "/ask_study_after_htl"
+        - title: "Bekomme ich nach der HTL einen Job?"
+          payload: "/jobs_after_htl"
+        - title: "Wie ist das Schulklima?"
+          payload: "/mood_at_school"
+        - title: "Brauche ich eine gewisse Ausstattung für die HTL?"
+          payload: "/equipment_needed"
+  utter_difference_to_other_schools:
+    - text: Wir an der HTL Leonding sehen uns als DIE Digitalisierer. Die Hauptstoßrichtung dabei ist natürlich die Softwareentwicklung und Programmieren mit den dazugehörigen Teilen der Elektronik.
+      buttons:
+        - title: "Muss ich nach der HTL studieren?"
+          payload: "/ask_study_after_htl"
+        - title: "Bekomme ich nach der HTL einen Job?"
+          payload: "/jobs_after_htl"
+        - title: "Wie ist das Schulklima?"
+          payload: "/mood_at_school"
+        - title: "Brauche ich eine gewisse Ausstattung für die HTL?"
+          payload: "/equipment_needed"
+  utter_social_education:
+    - text: Es gibt den Gegenstand soziale Kompotenz. In diesem wird das Miteinander gelehrt, also, wie man sich in einer Gruppe verhält und, wie man respektvoll miteinander umgeht.
+      buttons:
+        - title: "Wird auch Wirtschaft unterrichtet?"
+          payload: "/economy_subject"
+        - title: "Welche Sprachen werden an der HTL unterrichtet?"
+          payload: "/ask_languages_at_htl"
+        - title: "Welchen Zweig soll ich nehmen?"
+          payload: "/which_branch_to_choose"
+        - title: "Welches Equipment gibt es an der Schule?"
+          payload: "/school_equipment"
+  utter_economy_subject:
+    - text: In der Informatik ist die Wirtschaft ein Schwerpunkt mit den Fächern Betriebliche Organisation und Rechnungswesen. In den anderen Fachrichtungen gibt es jeweils 2 Wochenstunden Wirtschaft & Recht.
+      buttons:
+        - title: "Gibt es auch soziale Gegenstände?"
+          payload: "/social_education"
+        - title: "Welche Sprachen werden an der HTL unterrichtet?"
+          payload: "/ask_languages_at_htl"
+        - title: "Welchen Zweig soll ich nehmen?"
+          payload: "/which_branch_to_choose"
+        - title: "Welches Equipment gibt es an der Schule?"
+          payload: "/school_equipment"
+  utter_pe_for_girls:
+    - text: Es gibt einen eigenen Sportunterricht für Mädchen, in dem klassenübergreifend die Mädchen in Gruppen unterrichtet werden.
+      buttons:
+        - title: "Wie viele Mädchen gibt es an der HTL?"
+          payload: "/girls_count_at_school"
+        - title: "Gibt es eine Möglichkeit für Mädchen sich auszutauschen?"
+          payload: "/girls_connection"
+        - title: "Wie oft hat man Schule am Nachmittag?"
+          payload: "/school_in_the_afternoon"
+        - title: "Wie ist das generelle Schulklima?"
+          payload: "/mood_at_school"
+  utter_girls_connection:
+    - text: Es gibt einen eigenen Mädchenraum und ein immer wiederkehrendes Mädchencafé, bei dem die sozialen Kontakte gepflegt werden können.
+      buttons:
+        - title: "Wie viele Mädchen gibt es an der HTL?"
+          payload: "/girls_count_at_school"
+        - title: "Gibt es einen eigenen Sportunterricht für Mädchen?"
+          payload: "/pe_for_girls"
+        - title: "Wie oft hat man Schule am Nachmittag?"
+          payload: "/school_in_the_afternoon"
+        - title: "Wie ist das generelle Schulklima?"
+          payload: "/mood_at_school"
+  utter_mood_at_school:
+    - text: Wir haben ein ausgezeichnetes Schulklima und es wird auch viel abteilungsübergreifend gearbeit, wie man an den Diplomarbeiten erkennen kann.
+      buttons:
+        - title: "Welche Abteilungen gibt es?"
+          payload: "/ask_branches"
+        - title: "Wie viele Klassen gibt es pro Fachrichtung?"
+          payload: "/classes_per_grade"
+        - title: "Gibt es Schulausflüge?"
+          payload: "/trips_during_school"
+        - title: "Wie kommt man mit den öffentlichen Verkehrsmitteln zur HTL?"
+          payload: "/public_transport_connection"
+  utter_apply_for_school:
+    - text: Die Anmeldung erfolgt sobald man das Semesterzeugnis erhalten hat und die Frist kann auf der Schulhomepage eingesehen werden.
+      buttons:
+        - title: "Wie schwer ist es aufgenommen zu werden?"
+          payload: "/appliance_probability"
+        - title: "Brauche ich schon ein Vorwissen für die HTL?"
+          payload: "/pre_knowledge_for_htl"
+        - title: "Muss ich ein Pflichtpraktikum während der HTL machen?"
+          payload: "/internship_for_htl"
+        - title: "Muss ich mich vorbereiten auf die HTL?"
+          payload: "/prepare_for_htl"
+  utter_school_equipment:
+    - text: Es gibt eigene Werkstätten und Labors für die Elektronik und die Medizintechnik und die Medientechnik verfügt über ein Aufnahmestudio und andere multimediale Räume.
+      buttons:
+        - title: "Was ist das besondere an der HTL?"
+          payload: "/difference_to_other_schools"
+        - title: "Bekomme ich nach der HTL leicht einen Job?"
+          payload: "/jobs_after_htl"
+        - title: "Muss ich nach der HTL studieren?"
+          payload: "/ask_study_after_htl"
+        - title: "Welches Equipment brauche ich für die HTL?"
+          payload: "/equipment_needed"
+  utter_jobs_after_htl:
+    - text: Als Digitalisierer stehen einem alle Türen öffnen. Man kann in der Unterhaltungsbranche, Versicherungstechnik, Prozessautomation arbeiten oder studieren gehen.
+      buttons:
+        - title: "Muss ich studieren gehen?"
+          payload: "/ask_study_after_htl"
+        - title: "Muss ich ein Pflichtpraktikum machen?"
+          payload: "/internship_for_htl"
+        - title: "Zeig mir ein Bild der HTL!"
+          payload: "/show_school_picture"
+        - title: "Wie oft hat man am Nachmittag Unterricht?"
+          payload: "/school_in_the_afternoon"
+  utter_school_in_the_afternoon:
+    - text: Es ist von Fachrichtung zu Fachrichtung und von Jahrgang zu Jahrgang unterschiedlich, aber meistens gibt es 1-3 Nachmittage mit Unterricht.
+      buttons:
+        - title: "Welche Fachrichtungen gibt es?"
+          payload: "/ask_branches"
+        - title: "Ist die HTL schwer?"
+          payload: "/ask_htl_difficulty"
+        - title: "Kann ich was zu Mittag essen an der HTL?"
+          payload: "/lunch_at_school"
+        - title: "Wie ist der Werkstättenunterricht oder der Unterricht in den Labors?"
+          payload: "/workshops_and_labours"
+  utter_internship_for_htl:
+    - text: Jede Schülerin und jeder Schüler muss 2x ein Pflichtpraktikum von 4 Wochen machen.
+      buttons:
+        - title: "Wie praxisnahe ist der Werkstätten- und Laborunterricht?"
+          payload: "/workshops_and_labours"
+        - title: "In welchen Feldern kann ich nach der HTL arbeiten?"
+          payload: "/jobs_after_htl"
+        - title: "Welche freiwilligen Fächer gibt es?"
+          payload: "/voluntary_subjects"
+        - title: "Gibt es eine Möglichkeit sich als Mädchen mit anderen Mädchen zu vernetzen?"
+          payload: "/girls_connection"
+  utter_htl_duration:
+    - text: Die Höhere Abteilung umfasst 5 Jahre, die Fachschule dauert nur 4 Jahre.
+      buttons:
+        - title: "Welchen Zweig soll ich wählen?"
+          payload: "/which_branch_to_choose"
+        - title: "Wie viele Mädchen gibt es an der HTL?"
+          payload: "/girls_count_at_school"
+        - title: "Brauche ich eine gewisse Ausstattung für die HTL?"
+          payload: "/equipment_needed"
+        - title: "Gibt es auch Peers und Tutoren?"
+          payload: "/peers_at_school"
+  utter_peers_at_school:
+    - text: Ja, es gibt Tutoren und Peers an der Schule, welche den Erstklässlerinnen und Erstklässlern helfen können.
+      buttons:
+        - title: "Wie lange dauert die HTL?"
+          payload: "/htl_duration"
+        - title: "Was lerne ich in Programmieren in der 1. Klasse?"
+          payload: "/programming_after_first_grade"
+        - title: "Wie lange gibt es die HTL Leonding schon?"
+          payload: "/ask_htl_age"
+        - title: "Sind Studentenwohnheime in der Nähe?"
+          payload: "/ask_student_home"
+  utter_appliance_probability:
+    - text: Wenn eine Schülerin oder ein Schüler die entsprechenden Voraussetzungen erfüllt, wird diese mit großer Wahrscheinlichkeit auch aufgenommen wird.
+      buttons:
+        - title: "Danke, dass du mir Hoffnung machst"
+          payload: "/thanks"
+        - title: "Wie schwer ist die HTL?"
+          payload: "/ask_htl_difficulty"
+        - title: "Gibt es Studentenwohnheime in der Nähe?"
+          payload: "/ask_student_home"
+        - title: "Wie alt ist die HTL Leonding?"
+          payload: "/ask_htl_age"
+  utter_equipment_needed:
+    - text: In den Informatik- und Medientechnikklassen wird ein Notebook ab der 1. Klasse benötigt. In den Medizintechnik- und Elektronikklassen ist ein Notebook ab der 3. Klasse von Vorteil.
+      buttons:
+        - title: "Welchen Zweig soll ich wählen?"
+          payload: "/which_branch_to_choose"
+        - title: "Wie kann ich ein Anlegen an die HTL schreiben?"
+          payload: "/contact"
+        - title: "Wie viele Klassen gibt es pro Schulstufe?"
+          payload: "/classes_per_grade"
+        - title: "Wie groß sind die Klassen normalerweise?"
+          payload: "/average_class_size"
+  utter_trips_during_school:
+    - text: Ja, es gibt Schulausflüge. In der ersten Klasse gibt es sogenannte Kennenlerntage, in der 2. Klasse eine Sportwoche, in der 3. und 4. Klasse entweder eine Kultur- oder Sprachreise und in der 5. Klasse geht es meistens nach Brüssel, in die Hauptstadt der Europäischen Union.
+      buttons:
+        - title: "Wie kann ich ein Anlegen an die HTL schreiben?"
+          payload: "/contact"
+        - title: "Wie viele Klassen gibt es pro Schulstufe?"
+          payload: "/classes_per_grade"
+        - title: "Wie groß sind die Klassen normalerweise?"
+          payload: "/average_class_size"
+        - title: "Danke 😃"
+          payload: "/thanks"
+  utter_lunch_at_school:
+    - text: Es gibt in der Schule ein Buffet, bei dem es auch warme Mahlzeiten gibt. Gegen Vorbestellung können hier sogar warme Menüs bestellt werden.
+      buttons:
+        - title: "Lecker, ab wann kann ich mich bewerben?"
+          payload: "/apply_for_school"
+        - title: "Gibt es auch Mädchen an der Schule?"
+          payload: "/girls_count_at_school"
+        - title: "Macht man während der HTL auch Pflichtpraktika?"
+          payload: "/internship_for_htl"
+        - title: "Wie lange dauert die HTL?"
+          payload: "/htl_duration"
+  utter_school_autonomous_priorities:
+    - text: Ja, es gibt schulautonome Vertiefungen, wie beispielsweise Robotik, Mobile Computing und 3D-Animation.
+      buttons:
+        - title: "Gibt es auch soziale Fächer?"
+          payload: "/social_education"
+        - title: "Wird auch Wirtschaft an der HTL unterrichtet?"
+          payload: "/economy_subject"
+        - title: "Ist der Turnunterricht für Mädchen getrennt?"
+          payload: "/pe_for_girls"
+        - title: "Wie ist das Schulklima?"
+          payload: "/mood_at_school"
+  utter_public_transport_connection:
+    - text: Vom Hauptbahnhof fährt man mit der Straßenbahn 10 Minuten bis zur Meixnerkreuzung und von dort aus geht man noch weitere 10 Minuten bis zur Schule.
+      buttons:
+        - title: "Gibt es Studentenwohnheime in der Nähe?"
+          payload: "/ask_student_home"
+        - title: "Wie alt ist die HTL?"
+          payload: "/ask_htl_age"
+        - title: "Muss ich nach der HTL studieren gehen?"
+          payload: "/ask_study_after_htl"
+        - title: "Was sind die Kontaktdaten der HTL Leonding?"
+          payload: "/ask_contact"
+actions:
+  - action_hours_per_branch
+  - action_room_info
+  - action_consultation
+  - action_log_in
+  - action_utter_branch
+  - action_number_of_teachers
+  - action_number_of_classes
+  - action_number_students
+  - action_get_holidays
+  - action_tell_joke
+  - action_what_time_is_it
+  - action_what_date_is_it
+forms: { }
+e2e_actions: [ ]

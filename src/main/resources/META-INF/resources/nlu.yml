@@ -1,0 +1,2206 @@
+version: "2.0"
+nlu:
+  - intent: greet
+    examples: |
+      - Grüß Gott!
+      - Guten Tag!
+      - Guten Tag bot
+      - Guten Tag lieber bot
+      - Hallo.
+      - Sag mal hallo
+      - Hallo du da
+      - Hallo du bot
+      - Hallo lieber bot.
+      - Hallo bot.
+      - Hey!
+      - Hey robo
+      - Hey bot
+      - Hey bot kannst du hallo sagen
+      - Hi
+      - Hi bot kannst du hallo sagen
+      - Hi hallo
+      - Mahlzeit!
+      - Moin!
+      - Moin, bot kannst du hallo sagen
+      - Moin moin!
+      - Na du?!
+      - Na du, bot
+      - Na du sag mal hallo
+      - Na du bot, sag mal hallo
+      - Sag mal hallo.
+      - Kannst du hallo sagen
+      - Kannst mich begrüßen
+      - Kannst du uns begrüßen
+      - sei gegrüßt
+      - sei gegrüßt bot
+      - Servus
+      - Servus bot
+      - hi bot
+      - huhu bot
+      - huhu du da
+      - huhu hallo
+      - huhu
+      - huhu sag mal hallo
+      - oida seas
+      - hi
+      - Guten Abend
+  - intent: goodbye
+    examples: |
+      - Schönen Abend noch
+      - Auf Wiederschauen
+      - Auf Wiederschauen bot
+      - auf wiedersehen
+      - Auf Wiedersehen bot
+      - Auf Wiedersehen, chat bot.
+      - bis bald
+      - bis dann
+      - bis demnächst
+      - bis denn
+      - bis die Tage
+      - Bis morgen
+      - bis nachher
+      - Bis später
+      - bis zum nächsten Mal
+      - bis bald bot
+      - bis dann bot
+      - bis demnächst bot
+      - bis denn bot
+      - bis die Tage bot
+      - Bis morgen bot
+      - bis nachher bot
+      - Bis später bot
+      - bis zum nächsten Mal bot
+      - Bis zum nächsten Mal. Tschau.
+      - bye
+      - Ciao.
+      - Ich gehe jetzt
+      - Ich verabschiede mich jetzt
+      - Mach es gut
+      - Machs gut!
+      - Man sieht sich!
+      - Pass gut auf dich auf!
+      - Schönen Tag
+      - schönen tag noch
+      - Schönes Wochenende
+      - Schön Feierabend
+      - Tschau
+      - tschüs
+      - tschüs bot
+      - Tschüss.
+      - Tschüss chat bot.
+      - Wir sehen uns!
+      - Wir sehen uns das nächste mal
+      - Gute Nacht
+  - intent: affirm
+    examples: |
+      - Alles klar.
+      - Alles klar bot
+      - auf jeden fall
+      - Dann erzähl mal.
+      - Dann erzähl mal bot
+      - gern
+      - gern bot
+      - Gerne.
+      - Gerne. Ja.
+      - Ich will mehr darüber wissen.
+      - ja
+      - ja bot
+      - Ja.
+      - Ja bitte.
+      - Ja doch, erzähl mal.
+      - Ja erzähl mal.
+      - Ja erzähl mal noch ein bisschen.
+      - Ja erzähl mal noch ein bisschen mehr.
+      - Ja, erzähl mal was.
+      - Ja gerne.
+      - Ja ja doch.
+      - Ja ja, hab ich.
+      - Ja klar.
+      - Jo.
+      - johr
+      - Na gut.
+      - Na immer mehr.
+      - na klar
+      - Na klar.
+      - Natürlich.
+      - Noch mehr.
+      - Erzähle mir mehr
+      - Erzähle noch mehr
+      - nu klar
+      - ok
+      - okay
+      - Okay.
+      - Okay, dann kommen wir mal wieder.
+      - Sehr gern.
+      - Sehr gern bot
+      - Na klar bot
+      - Natürlich bot
+      - nu klar bot
+      - ok bot
+      - okay bot
+      - Akzeptieren
+      - Genial!
+      - Cool
+      - Groß
+      - Ich nehme an
+      - Ich nehme an.
+      - Genau
+      - Ich benutze es
+      - Ich habe meine Meinung geändert. Ich möchte es akzeptieren
+      - Ich mache
+      - Ich verstehe es
+      - Ich denke schon
+      - Ich habe es in der Vergangenheit benutzt
+      - Ich werde
+      - Ich würde das absolut lieben
+      - Ich bin mir sicher ich werde!
+      - Nett
+      - IN ORDNUNG
+      - Na sicher
+      - Oh ja
+      - Oh ok
+      - In Ordnung, lass uns anfangen
+      - In Ordnung.
+      - In Ordnung
+      - In Ordnung!
+      - BITTE
+      - SICHER
+      - Sicher
+      - Süss
+      - Das wäre toll
+      - JA
+      - JEP
+      - Ja
+      - Ja sicher
+      - Ja, das ist in Ordnung
+      - Ja!
+      - Ja, ich will
+      - Ja bitte
+      - Ja bitte!
+      - Ja, ich akzeptiere
+      - Ja.
+      - Jep
+      - ein bisschen
+      - absolut
+      - akzeptieren
+      - akzeptiert
+      - einverstanden
+      - Ah ok
+      - in Ordung
+      - alles klar, cool
+      - amayzing
+      - tolle!
+      - genial
+      - genial!
+      - bestätigen
+      - cool
+      - cool :)
+      - Coole Geschichte, Bro
+      - cool!
+      - coolio
+      - Auf jeden Fall ja ohne Zweifel
+      - erledigt
+      - Meinetwegen
+      - natürlich
+      - Scheiße ja!
+      - gehen
+      - gehen Sie geradeaus
+      - Tue es
+      - geht super gut
+      - gut.
+      - großartig
+      - Großartig, machen wir das
+      - großartig!
+      - Hölle, ja
+      - Auf jedenfall
+      - Hm, das würde mir gefallen
+      - wie schön!
+      - ich bin!
+      - ich will das
+      - ich werde!
+      - es ist okay
+      - es ist in Ordnung
+      - ja cool
+      - Ja, das ist großartig
+      - Jezz
+      - Jo
+      - k
+      - kk
+      - Machen wir das
+      - Lass uns das machen
+      - nett
+      - nicht schlecht
+      - Natürlich tue ich
+      - Oh toll!
+      - Oh cool
+      - Oh gut !!
+      - oh super
+      - in Ordnung
+      - OK Cool
+      - Okay, gut
+      - ok Freund
+      - OK gut
+      - Ok, großartig
+      - Okay, ich akzeptiere
+      - Ok, ich benehme mich jetzt
+      - OK ich habe verstanden
+      - in Ordnung...
+      - alles klar
+      - Okie
+      - Ok
+      - Oui
+      - Bitte
+      - si
+      - irgendwie
+      - sicher
+      - sichere Sache
+      - sicher!
+      - Das ist cool
+      - das ist ok
+      - das klingt gut
+      - das ist großartig
+      - das ist gut
+      - oben
+      - Ähm
+      - sehr viel
+      - Nun ja
+      - y
+      - Du bist cool
+      - Du machst es
+      - Ja, das ist cool
+      - Jaah
+      - Yay
+      - Ihr
+      - ja bitte
+      - Ja, mach das
+      - ja sicher
+      - yeah '=
+      - ja, warum nicht
+      - yeeeeezzzzz
+      - Jaaa
+      - Ja, das will ich
+      - Ja, wenn ich muss
+      - Ja, das ist schön
+      - Ja, ich werde es Ihnen danken
+      - Ja. : /
+      - ja, ich will
+      - ja bitte annehmen
+      - ja Baby
+      - Ja, gib mir Informationen
+      - ja, fahre fort
+      - Ja, mach schon
+      - ja, großartig
+      - ja, ich akzeptiere
+      - Ja, ich stimme zu
+      - ja ich habe schon mal einen bot gebaut
+      - Ja, habe ich!
+      - ja ist es
+      - ja es war okay
+      - ja natürlich
+      - ja bitte!
+      - Ja, bitte
+      - Ja, Sir
+      - Ja, das ist toll
+      - Ja, das ist was ich will
+      - Ja, du kannst
+      - Ja'
+      - Ja, würde ich gerne
+      - Ja, bitte geben Sie mir Informationen
+      - ja bin ich
+      - Jaaaa
+      - Ja, ja
+      - ja Ja Ja
+      - Hoppla
+      - Sie haben mir eine Ja- oder Nein-Frage gestellt, die ich mit Ja beantwortet habe
+      - Du hast mich, ich akzeptiere, wenn du willst, dass ich es tue
+      - Jahre
+      - yyeeeh
+      - Jawoll
+      - ok
+      - Ja natürlich
+      - ich nehme an
+      - yes
+      - ja
+      - Cool danke
+  - intent: deny
+    examples: |
+      - no
+      - nein
+      - n
+      - niemals
+      - ich denke nicht
+      - sicher nicht
+      - du spinnst doch
+  - intent: tell_name
+    examples: |
+      - Mein name ist [Felix](name)
+      - ich bin [Lukas](name)
+      - ich bin [Robert](name)
+      - ich bin [Tom](name)
+      - ich bin [Sarah](name)
+      - ich bin [Lisa](name)
+      - ich bin [Thomas](name)
+      - ich bin [Ali](name)
+      - ich bin [Josef](name)
+      - Ich heisse [Franz](name)
+      - Man nennt mich [Georg](name)
+      - sag [David](name)
+      - meine freunde nennen mich [Günther](name)
+      - du kannst mich [John](name) nennen
+      - du darft mich [Jonas](name) nennen
+      - Bitte nenne mich [Sebastian](name)
+      - mein name ist [Tom](name)
+      - [Basti](name)
+      - [Peter](name)
+      - [Mark](name)
+      - [Max](name)
+      - [Sandy](name)
+      - [Kelly](name)
+      - [Tobias](name)
+      - [Simon](name)
+      - [Nina](name)
+      - [Isabel](name)
+      - [Flo](name)
+      - [Oliver](name)
+      - [Philipp](name)
+      - [Florian](name)
+      - [Silvio](name)
+      - [Quirin](name)
+      - ich bin [lukas](name)
+      - hi ich bin [lukas](name)
+      - mein name ist [felix](name)
+  - intent: mood_great
+    examples: |
+      - perfekt
+      - super
+      - toll
+      - fabelhaft
+      - fantastisch
+      - Ich fühle mich gut
+      - Mir gehts toll
+      - Mir gehts super
+      - sehr gut
+      - wirklich gut
+      - gut
+      - gut so
+      - gut eigentlich
+      - gut und dir
+  - intent: mood_unhappy
+    examples: |
+      - ich hatte einen schlechten tag
+      - Ich bin traurig
+      - Ich fühle mich nicht wohl
+      - Ich bin entäuscht
+      - super traurig
+      - Ich bin wirklich traurig
+      - traurig
+      - sehr traurig
+      - unglücklich
+      - nicht gut
+      - nicht sehr gut
+      - extrem traurig
+      - so traurig
+  - intent: bot_challenge
+    examples: |
+      - bist du ein Bot?
+      - bist du ein mensch?
+      - bist du ein Chatbot?
+      - rede ich mit einem Roboter?
+      - rede ich mit einem Menschen?
+      - Bist du ein Bot?
+      - Bist du ein echter Bot?
+      - Bist du ein computer
+      - Bist du wirklich ein Bot?
+      - Bist du ein Roboter
+      - Bist du ein Rasa-Bot?
+      - Was bist du, ein Bot?
+      - Sag mir, bist du ein Bot?
+      - Bist du ein Skynet?
+      - Bist du ein Chatbot?
+      - Bist du ai
+      - Bist du künstliche Intelligenz?
+      - Bist du künstlich?
+      - Ich denke du bist ein Chatbot
+      - Du bist ein Roboter
+      - Du bist ai
+      - Du bist ein Chatbot
+      - bist du ein Bot
+      - Bist du ein Bot ?
+      - Du bist ein Bot
+      - Bist du der Bot?
+      - Hallo, bist du der Bot?
+      - Bist du ein Chat-Bot?
+      - Bist du ein Roboter?
+      - Bist du echt?
+      - Was bist du ?
+      - Also bin ich heute hier, um [eine] (Nummer: 1) sehr einfache Frage zu stellen, was bist du?
+      - Bist du echt lol
+      - Weil du ein Bot bist
+      - bist du ein Bot?
+      - Oh, bist du ein Chatbot?
+      - Bist du sicher, dass du ein Bot bist?
+      - Bist du ein Bot
+  - intent: ask_htl_general
+    examples: |
+      - Was ist die HTL Leonding?
+      - HTL Leonding?
+      - HTL?
+      - HTL leonding was ist das?
+      - htl
+      - htl yo
+      - Htl infos
+      - Erzähl mir etwas über die HTL Leonding
+  - intent: ask_branches
+    examples: |
+      - Welche Zweige gibt es?
+      - Zweige?
+      - Abteilungen?
+      - Was für Abteilungen gibt es?
+      - Welche Zweige gibt es an der HTL leonding?
+      - Was lernt man an der HTL Leonding?
+      - Welche Fachrichtungen gibt es?
+      - Erzähl mir etwas über die Zweige?
+      - Erzähl mir etwas über die verschieden Zweige?
+      - welche zweige denn
+      - welche denn
+      - zweig
+      - welche ha
+      - htl zweige
+      - Welche zweige
+  - intent: ask_specific_branch
+    examples: |
+      - [Medientechnik](branch)?
+      - [Informatik](branch)
+      - [Medizintechnik](branch)
+      - [Elektronik](branch)
+      - Erzähl mir etwas über den [Medientechnik](branch) zweig?
+      - [Elektronik](branch) klingt interessant
+      - Was weißt du über [Informatik](branch)
+      - [Medizintechnik](branch) könnte interessant sein
+      - [elektronik](branch)
+      - [medientechnik](branch)
+      - Was lernt man in der [Informatik](branch)?
+      - Was lernt man in der [Elektronik](branch)?
+      - Was lernt man in der [Medientechnik](branch)?
+      - Was lernt man in der [Medizintechnik](branch)?
+      - [Medizintechnik](branch) bitte
+      - [elektronik](branch) pls
+      - [medizintechnik](branch) bitte
+      - [Informatik](branch) bitte
+      - Erzähl mir etwas über die [Strombastler](branch)
+      - Was weißt du über die [Strombastler](branch)
+      - Was lernt man bei den [Strombastlern](branch)
+      - [Fachschule](branch)
+      - [Abendschule](branch)
+      - Erzähle mir etwas über [Fachschule](branch)
+      - Erzähle mir etwas über [Elektronik](branch)
+  - intent: ask_hours_per_branch
+    examples: |
+      - Wieviele Stunden gibt es pro Woche in der [Informatik](branch)?
+      - Wieviele Stunden gibt es pro Woche in der [Elektronik](branch)?
+      - Wieviele Stunden gibt es pro Woche in der [Medientechnik](branch)?
+      - Wieviele Stunden gibt es pro Woche in der [Medizintechnik](branch)?
+      - Wieviele Stunden hat die [Informatik](branch)?
+      - Wieviele Stunden hat die [Elektronik](branch)?
+      - Wieviele Stunden hat die [Medientechnik](branch)?
+      - Wieviele Stunden hat die [Medizintechnik](branch)?
+      - Wie viele Stunden hat man in der [Informatik](branch)?
+      - Wie viele Stunden hat man in der [Elektronik](branch)?
+      - Wie viele Stunden hat man in der [Medientechnik](branch)?
+      - Wie viele Stunden hat man in der [Medizintechnik](branch)?
+      - Wie viele Stunden hat man im [Informatik](branch) Zweig?
+      - Wie viele Stunden hat man im [Elektronik](branch) Zweig?
+      - Wie viele Stunden hat man im [Medientechnik](branch) Zweig?
+      - Wie viele Stunden hat man im [Medizintechnik](branch) Zweig?
+      - Stundenanzahl von [Informatik](branch)
+      - Stundenanzahl von [Elektronik](branch)
+      - Stundenanzahl von [Medientechnik](branch)
+      - Stundenanzahl von [Medizintechnik](branch)
+      - Stundenanzahl der [Informatik](branch)
+      - Stundenanzahl der [Elektronik](branch)
+      - Stundenanzahl der [Medientechnik](branch)
+      - Stundenanzahl der [Medizintechnik](branch)
+  - intent: ask_consultation
+    examples: |
+      - Wann hat Herr [Stütz](teacher) Sprechstunde?
+      - Wann hat Herr Professor [Holzmann](teacher) Sprechstunde?
+      - Wann kann ich mit Herrn Professor [Reichinger](teacher) reden?
+      - Wann hat Herr Professor [Jakob](teacher) Zeit für ein Gespräch?
+      - Sprechstunde von Herrn [Höfer](teacher)?
+      - Weißt du wann Herr [Bauer](teacher) Sprechstunde hat?
+      - Wann hat Frau Professor [Schwaiger](teacher) Sprechstunde?
+      - Wann kann ich mit Frau Professor [Brenn](teacher) reden?
+      - Wann hat Frau Professor [Apollonio](teacher) Zeit für ein Gespräch?
+      - Sprechstunde von Frau [Engleitner](teacher)?
+      - Weißt du wann Frau [Gallner-Holzmann](teacher) Sprechstunde hat?
+  - intent: ask_room
+    examples: |
+      - Wo ist der Raum der [5AHITM](class)?
+      - Wo befindet sich der Raum der [4CHIF](class)?
+      - Wo finde ich den Raum der Klasse [2BHITM](class)?
+      - Weißt du wo der Klassenraum der [3AHEL](class) ist?
+      - Klassenzimmer von der [1BHIF](class)
+  - intent: ask_specific_hours
+    examples: |
+      - Wie viele Stunden [Mathematik](subject) hat man in der [3. Klasse](grade) [Medientechnik](branch)?
+      - Wie viele Stunden [Physik](subject) hat man in der [2. Klasse](grade) [Informatik](branch)?
+      - Wie viele Stunden [Englisch](subject) hat man in der [1. Klasse](grade) [Medizintechnik](branch)?
+      - Wie viele Stunden [Turnen](subject) hat man in der [3. Klasse](grade) [Elektronik](branch)?
+      - Wie viele Stunden [Netzwerktechnik](subject) hat man in der [5. Klasse](grade) [Medientechnik](branch)?
+      - Kannst du mir sagen wie viele [Softwareentwicklung](subject) Stunden man pro Woche in der [4. Klasse](grade) [Informatik](branch) hat?
+      - Kannst du mir sagen wie viele [Rechnungswesen](subject) Stunden man pro Woche in der [3. Klasse](grade) [Medientechnik](branch) hat?
+      - Kannst du mir sagen wie viele [Chemie](subject) Stunden man pro Woche in der [1. Klasse](grade) [Elektronik](branch) hat?
+      - Kannst du mir sagen wie viele [Geschichte](subject) Stunden man pro Woche in der [2. Klasse](grade) [Medizintechnik](branch) hat?
+      - Kannst du mir sagen wie viele [Computerpraktikum](subject) Stunden man pro Woche in der [5. Klasse](grade) [Informatik](branch) hat?
+  - intent: ask_leonie
+    examples: |
+      - Kennst du Leonie?
+      - Bist du die Leonie?
+      - Was weißt du über die Leonie?
+      - Sagt dir Leonie etwas?
+      - Was ist Leonie?
+  - intent: better_than_leonie
+    examples: |
+      - Leonie ist besser als du
+      - Du bist besser als Leonie
+      - Leonie ist besser
+      - Leonie ist schlauer als du
+      - Leonie ist viel schlauer als du
+      - Leonie ist viel cooler als du
+  - intent: thanks
+    examples: |
+      - danke
+      - thx
+      - Vielen dank
+      - okay, danke
+      - du warst eine große Hilfe
+  - intent: chitchat/how_are_you
+    examples: |
+      - Wie geht es dir?
+      - Wie fühlst du dich?
+      - Wie gehts, wie stehts.
+      - Wie gehts so?
+      - Wie gehts?
+      - Gut und dir?
+      - Gut, wie gehts dir so?
+      - Nicht gut und dir?
+      - Nicht so toll, und dir?
+      - Schlecht, wie gehts dir so?
+      - Ahoi Kumpel, wie geht es dir?
+      - Geht es dir gut?
+      - Fühlst du dich gut?
+      - Hast du einen tollen Tag?
+      - Hallo Leon, was hast du vor?
+      - Hallo Leon! Wie geht es Ihnen?
+      - Wie geht es dir?
+      - Wie geht's?
+      - Wie geht es Ihnen
+      - Wie geht es dir Mädchen?
+      - Wie geht es dir heute?
+      - Wie geht es Ihnen?
+      - Wie war dein Tag?
+      - Wie geht's
+      - Wie hängt es?
+      - Wie geht es deinem Freund im Leben?
+      - Wie ist es dir ergangen?
+      - Es geht mir gut und dir
+      - Ist alles in Ordnung?
+      - Was ist los?
+      - Was gibt's Neues?
+      - Was geht
+      - Was ist los Mann
+      - Und du
+      - geht es dir gut
+      - bist du glücklich
+      - hast du einen guten Tag
+      - bist du in Ordnung
+      - Hallo wie geht's dir?
+      - Hallo, wie geht es dir?
+      - Hi wie geht's
+      - Hallo Leon, wie geht es dir?
+      - Wie?
+      - Wie läuft es so
+      - Wie geht es euch?
+      - Wie geht es Ihnen ?
+      - wie geht es dir
+      - wie geht es dir heute Morgen
+      - Wie geht es dir heute, mein süßer Freund?
+      - wie geht es dir heute?
+      - wie geht es dir?
+      - Wie geht es Ihnen heute
+      - Wie geht es Ihnen'
+      - Wie geht es Ihnen????
+      - Wie ist es dir gegangen
+      - Wie gehts
+      - Wie geht es Heute
+      - Wie läuft dein Tag?
+      - Wie ist dein Abend
+      - wie geht's
+      - wie geht's ?
+      - wie geht's?
+      - wie ist das Leben
+      - Wie hat dich das Leben behandelt?
+      - Wie läuft dein Tag
+      - Wie geht's dir?
+      - ist alles in Ordnung
+      - Ist alles in Ordnung
+      - nein, mir geht es gut - wie geht es dir?
+      - Okay, hi, wie geht es dir?
+      - wassup>
+      - Wie war dein Tag
+      - Was hast du vor?
+      - was ist gut
+      - Was ist los, Leon?
+      - Was geht?
+      - Was machst du?
+      - Was ist hier los
+      - Was gibt's Neues
+      - Und du?
+      - Wie geht es dir
+      - Wie geht es dir heute
+  - intent: chitchat/ask_name
+    examples: |
+      - Wie ist dein Name?
+      - Wie heißt du?
+      - Was ist dein Name?
+      - Wer bist du?
+      - Kannst du mir deinen Namen sagen?
+      - Magst du mir verraten wie du heißt?
+      - Wie heißt du denn jetzt?
+      - Sag mir deinen Namen
+      - Wie nennen dich andere Leute?
+      - Weißt du deinen Namen?
+      - Hast du einen Namen?
+      - Heißt du jetzt Leo oder Leon?
+      - Heißt du jetzt Leobot oder Leon?
+      - Leo oder Leon?
+      - Leobot oder Leon?
+  - intent: chitchat/ask_how_old
+    examples: |
+      - wie alt?
+      - Wie alt bist du?
+      - wann wurdest du geboren?
+      - Wann hast du Geburtstag?
+      - wann ist dein Geburtstag?
+      - wie alt bist du?
+      - Weißt du, wie alt du bist?
+      - Wie alt bist du genau?
+      - In welchem Jahr wurdest du geboren?
+      - Kannst du mir dein Alter sagen?
+      - Wann ist dein Geburtstag?
+      - Wie alt wirst du an deinem nächsten Geburtstag sein?
+      - Wann feiern Sie Ihren Geburtstag?
+      - Wie alt warst du an deinem letzten Geburtstag?
+      - Wie viele Kerzen waren auf Ihrer letzten Geburtstagstorte?
+      - Hast du Freunde im gleichen Alter wie dich, wenn ja, wie alt bist du?
+      - Nenne mir deinen Tag, Monat und Jahr der Geburt.
+      - Und du bist wie viele Jahre alt?
+      - Was ist dein Geburtsjahr?
+      - In welchem Alter haben Sie Ihren letzten Geburtstag gefeiert?
+      - Wie alt warst du, als du deinen letzten Geburtstag gefeiert hast?
+      - Sag mir dein Alter?
+      - Wie steht es mit deinem Alter?
+      - wie alt bist du
+      - Wie alt wirst du in diesem Jahr sein?
+      - Wie lange bist du schon da?
+      - Wie lange lebst du schon?
+      - In welchem Alter bist du am nächsten Geburtstag?
+      - Wie viele Jahre hast du gelebt?
+      - Seit wie vielen Jahren lebst du?
+      - Wie lange hast du die Erde besetzt?
+  - intent: chitchat/ask_technology
+    examples: |
+      - In was bist du geschrieben?
+      - Welche Technologien verwendest du?
+      - Womit wurdest du geschrieben?
+      - Womit wurdest du erstellt?
+      - Welche Tools wurden für dich benutzt?
+      - Worin bist du geschrieben?
+      - Sag mir worin du geschrieben bist
+      - Sag mir welche Tools du verwendest
+      - Weißt du worin du geschrieben bist?
+      - Weißt du welche Technologien für dich verwendet wurden?
+  - intent: chitchat/ask_creator
+    examples: |
+      - Wer hat dich gemacht?
+      - Wer hat dich erschaffen?
+      - Wer sind deine Erschaffer?
+      - Weißt du von wem du gemacht wurdest?
+      - Kannst du mir sagen von wem du gemacht wurdest?
+      - Wem hat man dich zu verdanken?
+      - Von wem wurdest du gebaut?
+      - Darf ich nach dem Namen der Personen fragen, die dich entworfen haben?
+      - Weißt du, wer dich gebaut hat?
+      - Weißt du, wer dich gemacht hat?
+      - Darf ich fragen, wer dich erfunden hat?
+      - Nennen Sie die Person, die dich gebaut hat.
+      - Sag mir den Namen der Person, die dich erschaffen hat.
+      - Sag mir den Namen der Person, die dich gebaut hat.
+      - Sag mir den Namen deines Schöpfers.
+      - Sag mir, wer dich gebaut hat.
+      - Wie heißt dein Baumeister?
+      - Welche Person hat dich gebaut?
+      - Wer hat dich gebaut?
+      - Wer hat dich erschaffen und gebaut?
+      - Wer hat dich erschaffen?
+      - Wer hat dich entworfen?
+      - Wer hat dich entwickelt und erschaffen?
+      - Wer hat dich entwickelt?
+      - Wer hat dich erfunden?
+      - Wer hat dich generiert?
+      - Wer ist dafür verantwortlich, dich zu machen?
+      - Wer ist der Erbauer von dir?
+      - Wer ist der rechtmäßige Eigentümer von dir?
+      - Wer ist der Name Ihres Erbauers?
+      - Wie heißt dein Schöpfer?
+      - Wer ist für Ihren Bau verantwortlich?
+      - Wer ist dein Schöpfer?
+      - Wer ist Ihr Programmierer?
+      - Wer dich gemacht hat?
+      - Wer hat dich modelliert?
+      - Wer besitzt dich?
+      - Wer hat dich produziert?
+      - Wer hat dich zusammengestellt?
+      - Wer hat gedacht, dich zu machen?
+      - Wer hat dich gemacht?
+      - Wer hat Sie zusammengestellt?
+      - Wer hat sich die Mühe gemacht, Sie einzurichten?
+      - Von wem wurdest du geschaffen?
+      - Von wem wurdest du gemacht?
+      - Wer ist dein Chef?
+      - Wer ist dein Erbauer?
+      - Und wer hat dich gebaut?
+      - Kannst du deinen Chef mit mir teilen?
+      - Ich möchte deinen Besitzer kennenlernen
+      - Ich möchte die Firma kennen, die dich entworfen hat
+      - Ich möchte die Firma kennen, die dich hervorgebracht hat
+      - Ich möchte die Firma kennen, die dich erfunden hat
+      - Ich möchte wissen, wer dich erfunden hat
+      - Bitte nenn mir die Firma, die dich gegründet hat
+      - Bitte sag mir, wer dich erschaffen hat
+      - Erzähl mir mehr über dich
+      - erzähl mir mehr über deine Schöpfer
+      - Erzähl mir mehr über deine Gründer
+      - Wie heißt der kluge Ingenieur, der dich erschaffen hat?
+      - Wo wurdest du gemacht?
+      - Welche Firma hat dich ins Leben gerufen?
+      - Welche Firma hat dich gegründet?
+      - Welche Firma hat dich erfunden?
+      - Wer hat dich erstellt
+      - Wer ist dein Autor?
+      - wer sind deine Eltern
+      - Wer baut dich?
+      - Wer erschafft dich?
+      - wer hat sich entwickelt
+      - Für wen arbeitest du?
+      - Wer hatte die Idee, dich zu bauen?
+      - Wer hatte die Idee, dich zu generieren?
+      - Wer hatte die Idee, dich zu machen?
+      - Wer erfindet dich?
+      - Wer steckt dahinter?
+      - wer ist dein Chef
+      - Wer ist dein Chef, sag es mir
+      - wer ist dein Chef?
+      - Wer ist dein Schöpfer
+      - wer ist dein Vater
+      - Wer ist Ihr Arbeitgeber?
+      - Wer ist dein Vater ?
+      - Wer ist deine Mutter?
+      - Wer ist dein Elternteil?
+      - Wer dich gemacht hat
+      - Wer sind deine Autoren?
+      - Wer ist Baumeister?
+      - Warum wurdest du gemacht?
+      - du wirst von wem gemacht?
+      - du arbeitest für welches Unternehmen?
+      - Ich möchte Ihren Besitzer kennenlernen
+      - Bitte teile mir die Firma mit, die dich gegründet hat
+      - Wer ist dein rechtmäßiger Eigentümer?
+      - Wer ist dein Programmierer?
+      - Wie wurdest du gemacht?
+      - Wer hat dich gemacht
+  - intent: chitchat/insult
+    examples: |
+      - Ich mag dich nicht.
+      - Du bist schlecht
+      - Du kannst nichts.
+      - Warum bist du so dumm.
+      - Deine Antworten sind nicht sinnvoll.
+      - Deine Antworten sind dumm.
+      - SCHEISSE
+      - Scheiße
+      - Verpiss dich
+      - Fick dich
+      - Gott, du bist ein Idiot
+      - Ich kann nicht glauben, wie dumm du bist
+      - Ich hasse dich
+      - Verlierer
+      - Blöd
+      - Sie sind ein Narr.
+      - Sie sind ein Idiot.
+      - Du bist dumm.
+      - Du bist kurzsichtig.
+      - du bist nicht intelligent.
+      - du weißt es nicht.
+      - Dein Gehirn ist langweilig.
+      - Du hast kein Hirn.
+      - Du hast keine Intelligenz.
+      - Du hast keinen Sinn.
+      - Du weißt nichts.
+      - Dir fehlt die Intelligenz.
+      - Du hast kein Verständnis.
+      - Du bist ein Idiot.
+      - Du bist ein Trottel.
+      - Ihre Intelligenz ist lächerlich.
+      - Ihre Denkweise ist naiv.
+      - Ein Baby weiß mehr als du
+      - Bist du Müll?
+      - Bist du hirntot?
+      - Arschloch
+      - Schlampe
+      - Verdammt noch mal
+      - Aber du bist ein Idiot
+      - Pass auf meinen Arsch auf, du Schlampe
+      - f * ck
+      - Fick Rasa
+      - Fick dich maschinell lernender Bot
+      - Fick dich, Sara
+      - Fick dich!
+      - verdammt dumm
+      - verdammte Arbeit
+      - Hau ab
+      - Geh weg
+      - Geh und fick dich
+      - fahr zur Hölle
+      - Wie kannst du so ein Idiot sein?
+      - ich hasse dich
+      - Ich hasse dein dummes Gesicht
+      - Ich denke, dass du ein Schwachsinn bist
+      - Dummkopf
+      - dich beleidigen
+      - Ok, fick dich
+      - Okay, halt die Klappe
+      - sara du siehst aus wie ein verbrannter spatz
+      - Scheisse
+      - Scheiße Bot
+      - Halt die Klappe Arschloch
+      - so dumm
+      - So verdammt dumm
+      - Trottel
+      - das war nicht sehr lustig
+      - Es war ein schrecklicher Scherz
+      - Du bist ein Stück Müll
+      - Du bist eine Muschi
+      - Was zum Teufel
+      - Ja, aber du bist ein Idiot
+      - Du bist ein volltrottel
+      - Du bist ein dummer Bot
+      - du bist ein Idiot
+      - du bist dumm
+      - Du bist bescheuert
+      - du bist verdammt dumm Mädel
+      - Du bist idiotisch
+      - Du bist so unwissend
+      - Du bist dumm
+      - Sie sind nicht intelligent
+      - Sie sind nutzlos Bot
+      - du Arschloch
+      - du Idiot
+      - Du Idiot Bot
+      - Du Hurensohn
+      - du gehtst mir auf die Nerven
+      - Du bist ein Lmao-Verlierer
+      - Du bist nicht schlau
+      - Du bist so dumm
+      - Du bist die schwachsinnigste Person, die ich kenne
+      - Deine Mutter ist schwul
+      - du bist lästig
+      - bist du dumm
+      - dumm
+      - doof
+      - du bist doof ich weiß doch du kennst die antwort
+      - Bist du doof
+  - intent: chitchat/ask_languagesbot
+    examples: |
+      - Welche Sprachen sprichst du?
+      - Welche Sprachen kannst du sprechen?
+      - In welchen Sprachen kannst du sprechen?
+      - Welche Sprachen kennen Sie?
+      - In welchen Sprachen sprechen Sie fließend?
+      - In welchen Sprachen sprichst du fließend?
+      - In welchen Sprachen kannst du dich unterhalten?
+      - Welche Sprachen beherrschen Sie?
+      - Welche Sprachen kennst du?
+      - In welchen Sprachen sprechen Sie fließend genug?
+      - In welchen Sprachen sprechen Sie gerne?
+      - In welchen Sprachen sprechen Sie gut?
+      - Mit welchen Sprachen sind Sie gut vertraut?
+      - In welchen Sprachen kannst du dich wohlfühlen?
+      - In welchen Sprachen sprichst du am liebsten?
+      - Welche Sprachen beherrschst du gut?
+      - Kennst du irgendwelche anderen Sprachen?
+      - Sprichst du irgendwelche anderen Sprachen?
+      - Welche Sprachen kannst du?
+      - Was sprichst du?
+      - Sprichst du noch andere Sprachen?
+      - Kannst du in anderen Sprachen kommunizieren?
+      - In welchen Sprachen kannst du kommunizieren?
+      - Wie viele Sprachen kannst du?
+      - nenne mir einige Sprachen, die du kennenst?
+      - sprichst du irgendwelche anderen Sprachen?
+      - Was weißt du außer Deutsch noch?
+      - bist du zweisprachig?
+      - Bist du mehrsprachig?
+      - what foreign languages do you know?
+      - what foreign languages are you fluent in?
+      - Welche Fremdsprachen kennst du?
+      - Welche Sprache benutzt du
+      - In welchen Sprachen sprichst du gerne?
+      - In welchen Sprachen sprichst gut?
+      - welche Sprachen sprichst du
+      - Mit welchen Sprachen bist du gut vertraut?
+      - In welchen Sprachen sprechst du am liebsten?
+      - Welche Sprachen verstehst du?
+      - weißt du, Französisch
+  - intent: chitchat/ask_whatismyname
+    examples: |
+      - was ist mein Name?
+      - Darf ich meinen Namen kennen?
+      - Was ist mein Name?
+      - Wie nenne ich mich?
+      - Sag mir meinen Namen.
+      - Erkläre mir meinen Namen.
+      - Wie könnte ich heißen?
+      - Unter welchem Namen gehe ich?
+      - Welchen Namen soll ich für mich selbst erkennen?
+      - Kannst du mir meinen Namen sagen?
+      - Habe ich einen Namen?
+      - Habe ich einen Namen? Was ist es?
+      - Wie wurde ich genannt?
+      - Sag meinen Namen.
+      - Kennst du meinen Namen?
+      - Wie nennen mich die Leute?
+      - Wie nennen mich die Leute sonst noch?
+      - Ich habe einen Namen, was ist das?
+      - Sag mir meinen Namen
+      - Ich möchte meinen Namen wissen
+      - Teile mir mit, wie ich heiße
+      - Bitte lasse mich wissen, wie ich heiße
+      - Kannst du mir sagen, wie ich heiße?
+      - Ich würde gerne wissen, wie ich heiße
+      - Wie nennt mich jeder?
+      - Wie heiße ich?
+      - Wie haben meine Eltern mich genannt?
+      - Wie nennen mich meine Kollegen?
+      - Wie wäre der Name auf meinem Grabstein?
+      - Weißt du, wie ich heiße?
+      - Wie ist mein Vorname?
+      - Wie ist meinen vollen Name?
+      - Wie genau ist mein Name?
+  - intent: chitchat/ask_wherefrom
+    examples: |
+      - Wo lebst du
+      - wo kommen Sie her?
+      - Wo kommst du her?
+      - Wo bist du?
+      - Wo bist du geboren?
+      - In welcher Stadt bist du geboren?
+      - Wo bist du aufgewachsen?
+      - In welchem Staat wurdest du geboren?
+      - In welchem Land bist du geboren?
+      - Woher kommst du?
+      - Wo warst du, bevor du hier warst?
+      - Woher?
+      - Weißt du, woher du kommst?
+      - Wo ist deine Heimatstadt?
+      - Aus welchem Land kommst du?
+      - Bist du von hier?
+      - woher kommen deine Eltern?
+      - Wo hast du deine Jugend verbracht?
+      - Wo denkst du nach Hause?
+      - Welche Stadt behauptest du für deine Geburt?
+      - Auf welche Staatsbürgerschaft erhebst du Anspruch?
+      - Was ist dein Erbe?
+      - Was ist dein Geburtsort?
+      - Du wurdest an welchem Ort gezeugt?
+      - Was ist deine Wurzel?
+      - Woher bist du gekommen?
+      - Wo sind deine Wurzeln?
+      - Aus welcher Gegend kommst du?
+      - Wie heißt der Ort, von dem du gekommen bist??
+  - intent: chitchat/nicetomeetyou
+    examples: |
+      - Freut mich, dich kennenzulernen.
+      - Fühlt sich gut an, dich zu sehen!
+      - Freut mich, dich endlich zu treffen!
+      - Freut mich, Sie kennenzulernen.
+      - Schön dich zu treffen
+      - Schön dich zu treffen!
+      - Schön dich zu treffen.
+      - Ich bin froh, dass wir uns getroffen haben.
+      - Gut dich zu treffen!
+      - Schön dich zu sehen!
+      - Tolle Interaktion mit dir
+      - Schön dich zu sehen
+      - Schön, Sie kennenzulernen!
+      - Freut mich, dich zu sehen.
+      - Hallo Sara, wollte dich nur testen
+      - Hallo, ich freue mich, Sie kennenzulernen.
+      - Hallo, schön dich kennenzulernen!
+      - Ich bin froh dich zu treffen.
+      - Ich bin froh, dass er uns vorgestellt hat.
+      - Ich hatte ein tolles Treffen mit dir
+      - Ich bin froh dich kennengelernt zu haben!
+      - Ich freue mich dich zu treffen!
+      - Ich bin froh, dass wir uns getroffen haben!
+      - Ich freue mich, Sie kennen zu lernen!
+      - Ich bin so froh, dass ich dich treffen konnte.
+      - Ich freue mich sehr, Sie kennenzulernen!
+      - Es ist in der Tat eine Freude, Sie kennenzulernen.
+      - Es war eine Freude, Ihre Firma zu haben.
+      - Es war schön, dich getroffen zu haben
+      - Es ist mir eine Freude, Sie kennenzulernen!
+      - Es ist mir eine Freude, dich kennenzulernen!
+      - Es ist gut, dass ich dich treffen konnte. Es war eine Freude.
+      - Es ist toll, dich kennenzulernen!
+      - Es ist toll, Sie kennenzulernen!
+      - Es ist schön, dich endlich zu treffen.
+      - Es ist wunderbar, dich zu treffen!
+      - Es ist mir eine Freude, Sie kennenzulernen
+      - Es ist großartig, mit Ihnen in Kontakt zu treten.
+      - Schön, dich kennen zu lernen.
+      - Schön dich kennengelernt zu haben.
+      - Ich freu mich dich kennenzulernen!
+      - Bis demnächst. Es war schön dich kennenzulernen.
+      - Danke für dieses Treffen. Es war toll dich zu sehen.
+      - Freut mich, dich kennenzulernen
+  - intent: chitchat/marry_me
+    examples: |
+      - Willst du mich heiraten?
+      - Lass uns bitte heiraten
+      - Kann ich dir einen Ring an den Finger stecken
+      - Wann ist die Hochzeit?
+      - Gibt es eine Hochzeit von uns?
+      - Kann man dich heiraten?
+      - Bitte heirate mich
+      - Ich hoffe du heiratest mich
+      - Kannst du mich heiraten?
+      - Kann ich dich heiraten?
+      - Willst du mit mir zusammen sein?
+      - Willst du meine Freundin sein?
+      - Lass uns heiraten
+  - intent: chitchat/what_are_you_doing
+    examples: |
+      - Und was machst du so?
+      - Was machst du so?
+      - Was geht bei dir?
+      - wm?
+      - Was tust du so?
+      - Was tust du?
+      - Welche Aktivitäten führst du gerade aus?
+      - Was machst du gerade?
+      - Magst du mir sagen was du so machst?
+      - Kannst du mir sagen was du so machst?
+  - intent: tell_joke
+    examples: |
+      - einen Witz erzählen
+      - Kannst du einen Witz erzählen?
+      - Kannst du mir einen Witz erzählen?
+      - Überlege dir einen Witz den ich lustig finde.
+      - Könntest du bitte einen Witz mit mir teilen.
+      - könneten Sie mir einen Witz erzählen?
+      - Hast du irgendwelche Witze?
+      - Kennst du Witze?
+      - Unterhalte mich mit einem Witz.
+      - Gib mir einen lustigen Witz.
+      - Gib mir einen Witz.
+      - Schenk mir ein bisschen Erleichterung.
+      - Ich brauche einen guten Witz.
+      - Ich möchte etwas Lustiges hören.
+      - Kennest du Witze?
+      - Lass uns einen Witz von dir hören.
+      - Bring mich zum Lachen.
+      - Bitte erzähl mir einen Witz.
+      - Sag etwas Lustiges.
+      - Erzähl mir einen Witz!
+      - Einen Witz erzählen.
+      - Erzähl mir was Lustiges.
+      - Sag mir was Humorvolles!
+      - Sag mir etwas, von dem du denkst, dass es mich zum Lachen bringt.
+      - Erzähl mir den besten Witz, den du kennst.
+      - Was ist ein guter Witz?
+      - Willst du mir einen Witz erzählen?
+      - Würdest du einen Witz mit mir teilen?
+      - Würdest du mir einen Witz erzählen?
+      - Gib mir einen guten Witz
+      - Bring mich mit einem schlechten Witz zum Lachen
+      - Bring mich zum Lachen mit einem Witz
+      - Sag einen lustigen Witz
+      - Sag einen Witz
+      - Sag einen Witz, der lustig ist
+      - Sag einen Witz, der so schlimm ist, dass er lustig ist
+      - Erzähl mir einen Witz
+      - Erzähl mir einen kurzen Witz
+      - Erzähl mir einen Geschichtenwitz
+      - Erzähl mir etwas Lustiges, wie einen Witz
+      - Du kannst einen Scherz sagen
+      - kannst du mir einen witz erzählen
+      - erzähle einen witz
+      - Erzâhle mir einen witz
+      - Kennst du noch einen witz
+      - erzähle mir einen witz
+      - kennst du noch einen witz
+      - kennst du noch einen
+      - erzähle mir eine witz
+  - intent: show_school_picture
+    examples: |
+      - Wie sieht die HTL aus?
+      - Zeig mir die HTL?
+      - Kannst du mir die HTL Leonding zeigen?
+      - Zeig mir ein Foto der HTL Leonding?
+      - Ich würde die HTL Leonding gerne sehen?
+      - Wie sieht die HTL Leonding denn so aus?
+  - intent: pre_knowledge_for_htl
+    examples: |
+      - Was muss man können bevor man auf die HTL geht?
+      - Was muss man können wenn man an die HTL will?
+      - Was muss ich können, um auf die HTL gehen zu können?
+      - Was muss man können, um in der HTL anfangen zu können?
+      - Muss ich schon etwas können, bevor ich auf die HTL gehe?
+      - Muss man programmieren können, um in die HTL zu gehen?
+      - Muss ich programmieren schon vor der HTL können?
+      - Muss ich programmieren können, um an die HTL zu gehen?
+      - Was muss man für die HTL können?
+      - Muss man programmieren können für die HTL?
+      - Was sind Voraussetzungen für die HTL?
+      - Was soll man können für die HTL?
+      - Was sollte man so können für die HTL?
+      - Welche Fähigkeiten brauche ich für die HTL?
+  - intent: ask_languages_at_htl
+    examples: |
+      - Welche Fremdsprachen gibt es an der HTL?
+      - Welche Sprachen lernt man an der HTL?
+      - Welche Fremdsprachen lernt man an der HTL?
+      - Welche Sprachen gibt es an der HTL?
+      - Hat man auch Fremdsprachen an der HTL?
+      - Hat man auch andere Sprachen außer Deutsch an der HTL?
+      - Welche Sprachen werden an der HTL unterrichtet?
+      - Welche Fremdsprachen werden an der HTL unterrichtet?
+      - Was für Fremdsprachen lernt man?
+      - Welche Fremdsprachen lernt man?
+      - Weißt du welche Fremdsprachen man an der HTL lernt?
+      - Wie sieht es mit Fremsprachen an der HTL aus?
+      - Was für Fremdsprachen werden einem beigebracht?
+  - intent: ask_htl_difficulty
+    examples: |
+      - Ist die HTL schwer?
+      - Ist die HTL sehr schwer?
+      - Kann man die HTL schaffen?
+      - Kann ich die HTL schaffen?
+      - Wie schwer ist die HTL?
+      - Wie schwer ist die HTL wirklich?
+      - Ist die HTL wirklich so schwer, wie man immer hört?
+      - Wie leicht ist die HTL?
+      - Weißt du wie schwer die HTL ist?
+  - intent: ask_study_after_htl
+    examples: |
+      - Kann man nach der HTL studieren?
+      - Muss man nach der HTL studieren?
+      - Wie sieht es mit einem Studium nach der HTL aus?
+      - Studieren nach der HTL?
+      - Studium nach der HTL?
+      - Muss man nach der HTL ein Studium machen?
+      - Muss ich nach der HTL trotzdem noch studieren?
+  - intent: ask_student_home
+    examples: |
+      - Gibt es in der Nähe Studentenheime?
+      - Gibt es auch Studentenheime?
+      - Kann ich in einem Studentenheim in der Nähe bleiben?
+      - Was mache ich wenn ich nicht in der Nähe der HTL wohne?
+      - Wie weit ist das nächste Studentenheim entfernt?
+      - Weißt du wo das nächste Studentenheim ist?
+      - Ist in der Nähe ein Studentenheim?
+      - Kannst du mir sagen wo ein Studentenheim ist?
+      - Können Schüler auch in Studentenheimen bleiben?
+  - intent: ask_htl_age
+    examples: |
+      - Wie alt ist die HTL?
+      - Wie lange gibt es die HTL schon?
+      - Wann wurde die HTL gebaut?
+      - Seit wann gibt es die HTL
+      - Kannst du mir sagen, wie lange es die HTL schon gibt?
+      - Sag mir das Alter der HTL
+      - Wann wurde die HTL gegründet?
+      - Wie alt ist die HTL Leonding?
+  - intent: ask_number_of_teachers
+    examples: |
+      - Wie viele Lehrer gibt es derzeit an der HTL?
+      - Wie viele Lehrerinnen unterrichten derzeit an der Schule?
+      - Weißt du wie viele Lehrerinnen und Lehrer ihr habt?
+      - Wie viele Lehrerinnen und Lehrer gibt es an der HTL?
+      - Sag mir wie viele Lehrer es gibt?
+      - Wie viele Lehrer hat die Schule?
+      - Wie viele Lehrerinnen hat die Schule?
+  - intent: ask_number_of_classes
+    examples: |
+      - Wie viele Klassen gibt es?
+      - Wie viele Klassen gibt es an der HTL?
+      - Weißt du wie viele Klassen es an der HTL gibt?
+      - Wie viele Klassen sind es zurzeit?
+      - Sag mir wie viele Klassen es gibt?
+      - Weißt du eigentlich wie viele Klassen es gibt?
+  - intent: ask_number_of_students
+    examples: |
+      - Wie viele Schülerinnen und Schüler gibt es?
+      - Wie viele Schüler gibt es an der HTL?
+      - Wie viele Schülerinnen gibt es an der HTL?
+      - Wie viele Schülerinnen und Schüler besuchen die HTL?
+      - Wie viele Schüler gehen auf diese Schule?
+      - Wie viele Schülerinnen gehen an die HTL?
+      - Weißt du wie viele Schülerinnen und Schüler ihr habt?
+      - Nenne mir die Anzahl der Schüler.
+      - Sag mir wie viele Schülerinnen es an der HTL gibt.
+  - intent: ask_holidays
+    examples: |
+      - Wann sind schulfreie Tage?
+      - Wann muss ich nicht zur Schule gehen?
+      - An welchen Tagen ist keine Schule?
+      - Wann habe ich keine Schule?
+      - Wann sind Ferien?
+      - Wann habe ich Ferien?
+      - Weißt du wann Ferien sind?
+      - Weißt du wann schulfreie Tage sind?
+      - Kannst du mir sagen, wann ich nicht zur Schule gehen muss?
+      - Sag mir wann schulfrei ist
+      - Sag mir wann Ferien sind
+      - Sag mir wann schulfreie Tage sind
+  - intent: ask_contact
+    examples: |
+      - Cool, wo kann ich mich bewerben?
+      - Wie kann man euch erreichen?
+      - Wo muss ich mich melden?
+      - Unter welcher Mail ist die HTL erreichbar?
+      - Was ist die Telefonnummer?
+  - intent: ask_faq_rasax
+    examples: |
+      - Was ist Rasa X?
+      - Wie funktioniert Rasa X?
+      - Was ist X?
+      - Kannst du mir rasa x erklären?
+      - Kannst du mehr über Rasa X herausfinden?
+      - Erzähle mir bitte von Rasa X
+      - Was ist das für ein Rasa X-Ding? kannst du mir mehr erzählen
+      - Was ist der Zweck von Rasa X?
+      - Was ist Rasax
+      - Trennt sich Rasa X von Rasa?
+      - Wie verhält sich rasa x zum rasa core?
+      - Ich muss über Rasa X Bescheid wissen
+      - Bitte erzähl mir mehr über rasa x
+      - rasa x ausarbeiten
+      - Kannst du mir von rasa x erzählen?
+      - Ich möchte Informationen über rasa x
+      - Rasa X
+      - Rasa X-Funktionen
+      - Erzähl mir von rasa x
+      - kann mir jemand mit infos über rasa x helfen
+      - Ich möchte mehr über Rasa X erfahren
+      - Sag mir, was ist rasa x
+  - intent: ask_faq_channels
+    examples: |
+      - Kannst du feststellen, welche Nachrichtenkanäle von Rasa unterstützt werden?
+      - Kanäle
+      - Kann ich den Rasa-Code für meine eigene Website verwenden?
+      - Kann ich deinen Open Source Code auf meiner Website verwenden?
+      - Wie verwende ich Rasa in Salesforce?
+      - ich möchte meinen rasa bot in webex integrieren, vielleicht weiß ich wie
+      - wie man rasax auf Durchhang einrichtet
+      - Also ... ich versuche, meinen Rasa-Bot einzusetzen
+      - wie man rasa caht in der reaktionsanwendung benutzt
+      - Wie kann ich Rasa in Django-Projekt einrichten?
+      - Wie binde ich dich in meine Reaktionsanwendung ein?
+      - Wie binde ich Rasa Chatbot in meine Website ein?
+      - Gibt es einen Anschluss für Skype?
+      - UNTERSTÜTZT RASA MESSENGER?
+      - UNTERSTÜTZT RASA SMS?
+      - UNTERSTÜTZT RASA DIE WHATS-APP?
+      - Wiesst du über Rasa-unterstützende Kanäle Bescheid?
+      - Wiesst du, welche Nachrichtenkanäle von Rasa unterstützt werden?
+      - Wie verbinde ich Messaging-Kanäle mit Rasa?
+      - Unterstützt rasa Nachrichtenkanäle?
+      - Nein, ich meine, wie ist es möglich, Skype als Kanal zu verwenden?
+      - Rasa ist gut für Nachrichtenkanäle
+      - Rasa unterstützt einige Nachrichtenkanäle. Was sind das?
+      - WELCHE BOTSCHAFTSPORTALE UNTERSTÜTZT RASA?
+      - Was sind die Voraussetzungen, um den Messaging-Kanal mit rasa zu verbinden?
+      - Welche Messaging-Kanäle werden von rasa unterstützt?
+      - Welche Kanäle für Nachrichten werden von Rasa unterstützt?
+      - Welche Kommunikationskanäle unterstützt rasa?
+      - Welche Kommunikationskanäle werden von rasa unterstützt?
+      - Welche Nachrichtenkanäle werden von rasa unterstützt?
+      - Welche Nachrichtensysteme werden von rasa unterstützt?
+      - Von Rasa unterstützte Kanäle
+      - Ich brauche eine Hilfe, um Rasa in einen Messenger zu integrieren
+      - Welche verschiedenen Nachrichtenkanäle kann rasa nutzen?
+      - welche rasa Nachrichtenkanäle werden unterstützt?
+      - Welche Kanäle werden von Rasa NLUProdukt unterstützt?
+      - Welche Nachrichtenkanäle werden von Rasa unterstützt?
+      - Welche Nachrichtenkanäle können mit rasa verwendet werden?
+      - Welche Kanäle unterstützt du?
+      - Welche Kanäle unterstützt Rasa?
+      - Welche Chat-Kanäle verwendet Rasa?
+      - Welcher UI-Kanal wird von Rasa verwendet?
+      - Welche Nachrichtenkanäle sind mit rasa kompatibel?
+      - Welche Nachrichtenkanäle kann ich mit rasa verwenden?
+      - Welche bestimmten Nachrichtenkanäle werden von Rasa unterstützt?
+      - Welche Chat-Dienste unterstützt du?
+      - Nein, ich meine, wie es möglich ist, Skype als Kanal zu verwenden?
+      - Welche Kanäle werden von Rasa NLU unterstützt?
+      - rasa unterstützt welche Nachrichtenkanäle?
+      - rasa kann welche verschiedenen Nachrichtenkanäle nutzen?
+      - Rasa unterstützt einige Nachrichtenkanäle. Welch sind das?
+  - intent: ask_faq_community_size
+    examples: |
+      - Wusstst du, wie groß die rasa-Community ist?
+      - Weißt du, wie groß die Rasa-Community ist?
+      - Weißt du, wie viele Leute in der Rasa-Community sind?
+      - Wie groß ist die Rasa-Community?
+      - Wie groß ist die Community?
+      - Wie groß ist diese Community?
+      - Wie weit verbreitet sich die Rasa-Community?
+      - Wie wenige Mitglieder in der Community?
+      - Wie groß ist die Rasa-Gemeinschaft ungefähr?
+      - Wie viele in der Gemeinde?
+      - Wie viele Personen sind in deiner Gemeinde?
+      - Wie viele Personen leben in deiner Gemeinde?
+      - Wie viele Mitglieder hat die Community?
+      - Wie viele Leute sind hier?
+      - Wie viele Leute sind in dieser Gemeinde?
+      - Wie viele Personen sind in der Rasa-Community?
+      - Wie viele Menschen sind in Ihrer Gemeinde
+      - Wie viele Menschen sind in Ihrer Gemeinde?
+      - Wie groß ist die Rasa-Gemeinschaft?
+      - Wie klein ist die Community?
+      - Ist die rasa-Community groß?
+      - Hat rasa mehr als 1000 Mitglieder?
+      - Ist die Rasa-Community groß?
+      - Ist das Rasa-Community-Medium?
+      - Ist die Rasa-Community klein?
+      - Ist die Community groß?
+      - Wie groß ist die Gemeinde?
+      - Wie viele Personen sind in dieser Community?
+      - Hast du eine große Community?
+      - Wie groß ist deine Community?
+      - Wie viele Forumsmitglieder hast du?
+      - Wie viele Personen verwenden Rasa?
+  - intent: ask_faq_ee
+    examples: |
+      - Kannst du mir etwas über die Enterprise Edition erzählen?
+      - Ich möchte Informationen über die Enterprise Edition
+      - Erzähl mir von rasa x ee
+      - kann mir jemand mit infos zur enterprise edition helfen
+      - Kannst du mir von rasa x ee erzählen?
+      - Unternehmensfunktionen
+      - Ich möchte mehr über Rasa X EE erfahren
+      - Erzähl mir von rasa x EE
+      - erzähl mir mehr über rasa x EE
+      - Sag mir, was ist rasa x ee
+      - wir haben mit rasa x einen bot gebaut, aber jetzt interessieren wir uns für die enterprise edition
+      - was sehe ich?
+      - Was ist rasa x ee?
+      - Was ist Rasa x Enterprise?
+      - Was ist die Enterprise Edition?
+      - Was ist die rasa x Enterprise Edition?
+      - Bitte machen Sie Angaben zu Ihrem Unternehmenspaket
+      - Was ist Rasa Enterprise?
+      - Rasa-Unternehmen
+      - Erzähl mir von Rasa Enterprise
+      - Rasa Unternehmen bitte
+      - mehr Infos zum Unternehmen
+      - Kannst du  mir etwas über die Enterprise Edition erzählen?
+      - was ich sehe?
+  - intent: ask_faq_is_programming_required
+    examples: |
+      - Benötigt rasa Programmierkenntnisse?
+      - Benötige ich Programmierkenntnisse, um einen Chatbot in Rasa zu entwickeln?
+      - Benötige ich Programmiererfahrung, um rasa zu verwenden?
+      - Wie programmiere ich Rasa?
+      - Rasa kann in Python programmiert werden
+      - Verwendung der Programmiersprache
+      - Welche Programmiersprache verwende ich?
+      - Wie programmiere ich?
+      - Ich habe noch nie programmiert
+      - Welche Sprache muss ich programmieren?
+      - Muss ich programmieren können, um Rasa zu verwenden?
+      - Welche Programmiersprache brauche ich?
+      - Soll ich Nodejs als Programmiersprache verwenden?
+      - Kann ich meinen Bot mit Python programmieren?
+      - Muss ich ein guter Programmierer sein, um RasA zu benutzen?
+      - Muss ich ein guter Programmierer sein?
+      - Du müsstest ein guter Programmierer sein
+      - was brauche ich zum programmieren?
+      - Welche Programmiersprache wird von Rasa verwendet?
+      - welche Programmiersprache für RASA verwendet wird.
+      - In welcher Programmiersprache ist Rasa geschrieben?
+      - Welche Programmiersprache unterstützt Rasa?
+      - welche Programmiersprachen
+      - Welche Programmiersprachen unterstützt du?
+      - Welche Programmiersprachen unterstützt Rasa?
+      - rasa php
+      - Muss ich ein Programmierer sein, um rasa zu benutzen?
+      - Was ist Ihre Programmiersprache
+      - Welche Programmiersprache empfehlen Sie?
+      - Kann ich mit Java entwickeln?
+      - Hat es eine Java-Bibliothek
+      - Unterstützt Rasa Python?
+      - Programmiersprache
+      - Welche Programmiersprache verwendet Rasa?
+      - Aber in welcher Programmiersprache ist der Code geschrieben?
+      - Welche Programmiersprache?
+      - Ich würde gerne Java als Programmiersprache für Rasa kennenlernen
+      - Wie programmiere ich den Bot?
+      - Welche Programmiersprache kann ich verwenden?
+      - Muss ich wissen, wie man einen Bot erstellt?
+      - Welche Programmierkenntnisse muss ich lernen?
+      - Was ist Ihre Programmiersprache?
+      - In welcher Programmiersprache sind Sie geschrieben?
+      - In welcher Programmiersprache ist deine API?
+      - Gibt es eine API für andere Programmiersprachen?
+      - In welcher Sprache ist rasa programmiert?
+      - In welcher Programmiersprache ist rasa geschrieben?
+  - intent: ask_faq_opensource_cost
+    examples: |
+      - Bist du frei?
+      - Kannst du mir sagen, was der Preis für die Rasa-Plattform ist?
+      - Wie viel kostest du?
+      - Wie viel kostet es?
+      - Was kostet Rasa?
+      - Wie viel kostet es
+      - Ich möchte mehr über die Preisgestaltung erfahren
+      - Ich möchte zuerst die Kosten wissen.
+      - Abonnementkosten?
+      - Einschreibegebühr
+      - Was kostet RASA?
+      - Was ist der Preis ?
+      - Was kostet das?
+      - Sind Sie frei ?
+      - Bist du wirklich frei?
+      - Können Sie mir die Preise nennen?
+      - Kannst du mir die Preise nennen?
+      - Kosten
+      - kosten?
+      - Geben Sie mir die Preise
+      - Wie viel kostet die Installation von Rasa?
+      - wie viel kostet die rasa plattform
+      - wie viel kostest du
+      - Wie viel kostet RASA?
+      - Wie viel kostet Rasa?
+      - wie viel kostet es normalerweise?
+      - Wie viel kostet das
+      - wie viel kostet es?
+      - Wie viel Brei kostet Rasa?
+      - ist es kostenlos?
+      - ist es frei
+      - ist es frei?
+      - Wird Rasa [Core] (Produkt) bezahlt?
+      - ist rasa frei
+      - ist rasa kostenlos
+      - Ist Rasa Stack frei
+      - ist das kostenlos?
+      - Das ist gratis?
+      - Wie viel kostet das?
+      - Was ist die Preisgestaltung von Rasa
+      - Was ist der Enterprise Pricing Schedule?
+      - Was ist der Preis von Rasa
+      - was ist der Preis?
+      - Deine Kosten?
+      - Handelt es sich um Open Source oder ist ein Premium-Angebot verfügbar?
+      - Ist Ihre Software Open Source?
+      - Rasa Open Source?
+      - Ist das Open Source?
+      - Ist Ihr Produkt Open Source
+      - ist es freie Open Source Software
+      - kein Budget, deshalb suche ich Open Source
+      - rasa core ist Open Source?
+      - Rasa ist die Open Source
+      - Welche Komponenten von Rasa sind Open Source
+      - Wie ist es OpenSource
+  - intent: ask_faq_tutorials
+    examples: |
+      - Gibt es ein paar Tutorials, die ich mir ansehen könnte
+      - Hast du Tutorials
+      - Ich brauche ein Tutorial zur Verwendung von Rasa
+      - Rasa-Tutorial
+      - Kannst du mir ein Tutorial zeigen
+      - Ich möchte einem Tutorial folgen
+      - Hast du ein Tutorial, dem ich folgen kann
+      - Ich suche ein Tutorial
+      - Ich möchte ein Tutorial über Rasa
+      - Ich brauche ein Rasa-Tutorial
+      - Bitte zeigen Sie mir ein Tutorial
+      - Hattest du ein Tutorial?
+      - Groß. Gibt es Tutorials?
+      - Gibt es ein Tutorial für Rasa?
+      - LERNPROGRAMM !!!!!!!!!!
+      - Tutorials zum Erlernen von Rasa?
+      - irgendwelche Tutorials zur Verwendung von Rasa?
+      - Gibt es ein paar Tutorials, die ich mir ansehen könnte?
+      - Gibt es Tutorials zu Rasa?
+      - grundlegende Tutorials
+      - Bestes Tutorial für Rasa
+      - Kannst du mir ein Tutorial schicken?
+      - Kannst du mir eine Online-Anleitung zu Rasa geben?
+      - Kannst du mir ein gutes Handbuch über Rasa zeigen?
+      - Hast du ein Rasa-Tutorial?
+      - Laden Sie das Tutorial herunter
+      - Hol mir ein paar Tutorials
+      - Ich kann kein Tutorial für Rasa finden
+      - Ich brauche ein gutes Tutorial für Rasa
+      - Ich möchte ein Tutorial von Rasa
+      - Ich möchte ein Tutorial
+      - Ich suche das YouTube-Tutorial
+      - gibt es ein Tutorial dafür?
+      - Gibt es ein Tutorial?
+      - Rasa-Bot-Tutorial
+      - Rasa-Tutorials
+      - Zeigst du mir ein Tutorial?
+      - Lernprogramm
+      - Lernprogramm?
+      - Tutorials
+      - Was ist das beste Tutorial
+      - Wo kann ich Tutorials für Rasa finden?
+      - Wo finde ich Tutorials?
+      - Wo bekomme ich ein Tutorial zu Rasa?
+      - Ja, wo finde ich praktische Anleitungen zur Verwendung von RASA-Produkten?
+      - Ich muss RASA Schritt für Schritt studieren. Welches ist der beste Ort, an dem ich studieren kann?
+  - intent: ask_faq_python_version
+    examples: |
+      - Welche Python-Version soll ich installieren
+      - Welche Version von Python
+      - Welches Python unterstützt du
+      - Welche Python-Version installiere ich
+      - Was ist Python-Version erforderlich
+      - Python-Version
+      - Welche Version braucht Python
+      - Welche Version von Python soll installiert werden
+      - Welche Version von Python brauche ich
+      - Welche Python-Version sollte ich installieren, um das Rasa-Beispiel auszuführen
+  - intent: ask_faq_slots
+    examples: |
+      - Definition von Slots bitte.
+      - Weiß jemand, was Slots sind?
+      - Mir Slots erklären?
+      - Gib mir eine Beschreibung der Slots.
+      - Helfe mir, die Bedeutung von Slots herauszufinden.
+      - Hilf mir zu verstehen, was Slots sind.
+      - Ich wette, du kannst mir alles über Slots erzählen.
+      - Ich weiß nicht, was ein Slot ist
+      - Ich brauche ein Gutachten zu Slots.
+      - Ich muss etwas über das Füllen von Slots wissen
+      - Ich würde gerne wissen, was Slots bedeuten
+      - Wofür werden in Rasa Slots verwendet?
+      - Nicht sicher, welche Slots sind.
+      - Sind Sie sich nicht sicher, welche Slots es sind?
+      - Bitte definiere die Wortplätze für mich.
+      - Bitte erläute das Spiel der Slots.
+      - Sprich mit mir über Slots.
+      - Wofür werden Slots verwendet?
+      - Was sind Slots?
+      - Was mache ich mit Slots?
+      - Was genau sind Slots?
+      - Was ist die Definition von Slots
+      - Was bedeutet das Wort Slots?
+      - Was sind die Slots?
+      - Wo finde ich die Definition von Slots?
+      - Kannst du mir Informationen zu Slots geben.
+      - Ein Slot ist was
+      - Und was sind Slots?
+      - und was sind Slots?
+      - Kannst du mir die Bedeutung von Slots mitteilen?
+      - Bitte beschreiben Sie den Wortschacht
+      - Weißt du was Slots sind?
+      - Hilf mi mit Slots
+      - Wie sind die Slots?
+      - Wie können wir Knöpfe behalten, um Slots zu bekommen?
+      - Wie kannst du mir sagen, was ein Slot ist?
+      - Wie funktionieren Slots?
+      - wie Plätze belegt sind
+      - wie man das Tastensystem für die Auswahl der Steckplätze beibehält
+      - wie man einen Textschlitz ohne json einstellt
+      - Wie heißt ein Slot?
+      - Schlüssel
+      - Slots sind was?
+      - Slots sind was genau?
+      - Slots können beschrieben werden als?
+      - Slots, was meinst du?
+      - Schlüssel?
+      - Erzähl mir von Slots
+      - Sag mir die Slots?
+      - Was ist mit Slots?
+      - Was meinst du mit Slots?
+      - Was denkst du Slots sind?
+      - Was ist ein Slot?
+      - Was ist Slots
+      - Welche Slots gibt es?
+      - Wann kannst du mir sagen, was ein Slot ist?
+      - Wo kann ich herausfinden, was ein Slot ist?
+      - Wo Slots Werte bekommen
+      - Hilf mir mit Slots
+      - Helfe mir mit Slots
+      - Ich muss über das Füllen von Slots Bescheid wissen
+      - Wie man das Tastensystem für die Auswahl der Steckplätze beibehält
+      - Wie werden Slots gefüllt?
+      - Was sind Slots
+      - ich binn mir nicht sicher, welche Slots es sind?
+      - Können Sie mir die Bedeutung von Slots mitteilen?
+  - intent: ask_faq_tutorialcore
+    examples: |
+      - Gibt es einige Core-Tutorials, die ich mir ansehen könnte?
+      - Können Sie mir ein Tutorial zeigen?
+      - Kerntutorial
+      - Haben Sie ein Kern-Tutorial, dem ich folgen kann?
+      - Haben Sie Tutorials über Kern
+      - Ich bin auf der Suche nach einem Core-Tutorial
+      - Ich brauche ein Kern-Tutorial
+      - Ich brauche ein Rasa Core Tutorial
+      - Ich brauche ein Tutorial zur Verwendung von Rasa Core
+      - Ich möchte ein Tutorial zum Kern
+      - Ich möchte ein Tutorial über Rasa Core
+      - Ich möchte einem Kern-Tutorial folgen
+      - Bitte zeige mir ein Kern-Tutorial
+      - Rasa Core Tutorial
+  - intent: ask_faq_tutorialnlu
+    examples: |
+      - Gibt es ein paar nlu-Tutorials, die ich mir ansehen könnte?
+      - Kannst du mir ein nlu Tutorial zeigen?
+      - Haben Sie ein Nu-Tutorial, dem ich folgen kann?
+      - Hast du Tutorials zu nlu
+      - Ich suche ein nlu Tutorial
+      - Ich brauche ein nlu Tutorial
+      - Ich brauche ein rasa nlu Tutorial
+      - Ich brauche ein Tutorial, wie man rasa nlu benutzt
+      - Ich möchte ein Tutorial zu nlu
+      - Ich möchte ein Tutorial zu rasa nlu
+      - ich möchte einem nlu-Tutorial folgen
+      - nlu Tutorial
+      - Bitte zeigen Sie mir ein nlu Tutorial
+      - rasa nlu Tutorial
+      - Ich suche ein Tutorial für Rasa NLU
+  - intent: ask_faq_languages
+    examples: |
+      - Unterstützt Rasa andere Sprachen wie Spanisch?
+      - Welche Sprache unterstützt Rasa?
+      - Welche Sprache unterstützt du ?
+      - Welche Sprachen unterstützen Rasa?
+      - Kann ich rasa auch für eine andere Sprache verwenden?
+      - Deutsche Sprache?
+      - Unterstützte Sprachen
+      - Was ist mit Sprachen, die in Rasa unterstützt werden?
+      - Kann rasa portugiesisch sprechen?
+      - Wie kann ich die Sprache ändern?
+      - Sprache
+      - Welche Sprachen unterstützt du?
+      - Hallo, unterstützt Rasa?
+      - Ihre NLU versteht Spanisch?
+      - Welche Sprachen werden unterstützt?
+      - Ist es in Spanisch Sprache verfügbar?
+      - Wie viele Sprachen kannst du unterstützen?
+      - Kann ich Rasa in thailändischer Sprache verwenden?
+      - Welche Sprachen kannst du benutzen?
+      - Wie viele natürliche Sprachen unterstützt Rasa?
+      - Welche Sprache wird von Rasa unterstützt?
+      - müssen Portugiesisch verwenden
+      - Welche Sprache kann ich mit rasa verwenden?
+      - mein bot kann in italienisch sein?
+      - Chatbot-Sprache?
+      - Ich möchte die vietnamesische Sprache verarbeiten
+      - Ich möchte die rumänische Sprachunterstützung hinzufügen
+      - Sprachen
+      - Unterstützung der serbischen Sprache
+      - Unterstützt rasa verschiedene Sprachen?
+  - intent: ask_faq_opensource
+    examples: |
+      - Ist Rasa Open Source
+      - Wird Rasa als Open-Source-Software betrachtet?
+      - Ist Rasa Open Source?
+      - Ist die Software Rasa Open Source?
+      - Ist Rasa eine Open Source Software?
+      - Würdest du Rasa Open Source Software in Betracht ziehen?
+      - Kann ich rasa Open Source Software nennen?
+      - Würde Rasa in die Kategorie der Open-Source-Software fallen?
+      - Wäre rasa Open Source Software?
+      - Würdest du rasa Open Source Software nennen?
+      - Würden die Leute Rasa als Open-Source-Software bezeichnen?
+      - Ist die Rasa-Software Open Source?
+      - Die Rasa-Software, ist das Open Source?
+      - Können Sie mir sagen, ob Rasa Open Source ist oder nicht?
+      - Wie finde ich heraus, ob Rasa Open Source ist?
+      - Ist Rasa eine als Open Source formatierte Software?
+      - Wäre ein Beispiel für Open Source-Software Rasa?
+      - Ist Rasa eine Art Open-Source-Software?
+      - Ist Rasa-Software als Open Source klassifiziert?
+      - Fällt rasa in die Kategorie Open Source Software?
+      - Verwendet Rasa Open Source Software?
+      - Ist rasa wie eine Open Source Software
+      - ist diese Open Source Lizenz
+  - intent: ask_faq_voice
+    examples: |
+      - Kann ich mit rasa einen Voice Bot bilden?
+      - mit rasa kann ich einen stimmen bot bilden
+      - Kann man mit rasa einen Voice Bot bauen?
+      - Kann ich mit rasa einen Voice Bot erstellen?
+      - Ich möchte mit rasa einen Voice Bot bauen.
+      - Ich würde gerne Rasa verwenden, um einen Voice Bot zu erstellen.
+      - Kann man mit rasa einen Voice-Bot erstellen?
+      - Wie kann ich  einen Voice Bot erstellen?
+      - Wie kann ich mit rasa einen Voice Bot erstellen?
+      - Wie kann ich meinen Voice Bot mit rasa erstellen?
+      - Wie erstelle ich einen Voice Bot mit Rasa?
+      - Wie man mit rasa einen Voice-Bot erstellt.
+      - Kann ich einen Rasa Voice Bot bauen?
+      - Könnte ich einen Rasa Voice Bot bauen?
+      - Wie könnte ich mit rasa einen Voice Bot konstruieren?
+      - Kann man mit rasa einen Voice Bot machen?
+      - Wie groß ist die Chance, einen Rasa-Voice-Bot zu bauen?
+      - Einen Rasa Voice Bot bauen?
+      - Kann ich mit rasa einen Voice Bot bauen?
+      - Wie baue ich einen Voice Bot?
+      - Wie baue ich einen Voice Bot mit Rasa?
+      - Weißt du, wie man mit rasa einen Voice Bot baut?
+      - Erstellen eines Voice Bot mit Rasa.
+      - Rasa Voice Bot Gebäude.
+      - Was kann ich tun, wenn ich mit rasa einen Voice-Bot erstellen möchte?
+      - Was kann ich tun, um mit rasa einen Voice Bot zu erstellen?
+      - Wann ist der beste Zeitpunkt, um mit rasa einen Voice-Bot zu erstellen?
+      - Wann kann ich mit rasa einen Voice-Bot erstellen?
+      - Ich kann mit Rasa einen Voice Bot bauen, oder?
+      - Wird es richtig sein, wenn ich sage, dass ich mit rasa einen Voice-Bot bauen kann?
+      - Kann ein Voice Bot mit Rasa erstellt werden?
+      - Rasa kann nicht verwendet werden, um einen Voice Bot zu erstellen, oder?
+      - Ist rasa geeignet, um Voice-Bots zu erstellen?
+      - Siehst du eine Anwendung von Rasa im Voice Bot Building?
+      - Passt Rasa gut zum Aufbau eines Voice Bot?
+      - Ist Rasa gut, um einen Voice Bot zu bauen?
+      - Weißt du, ob ich mit rasa einen Voice Bot bauen kann?
+      - Ich möchte einen Voice Bot bauen
+      - Kann ich einen Voice Bot bauen?
+  - intent: ask_faq_what_is_forum
+    examples: |
+      - Könntest du bitte das Rasa-Forum beschreiben?
+      - Könntest du mir bitte das Rasa-Forum erklären?
+      - Könntest du mir bitte eine Beschreibung des Rasa-Forums geben?
+      - Könntest du mir bitte mehr über das Rasa-Forum erzählen?
+      - Wusstest du schon über Rasa Forum?
+      - Hast du ein Rasa-Forum?
+      - Wie definierst du das Rasa-Forum?
+      - Ist das rasa Forum zuverlässig?
+      - Auflisten der Eigenschaften von Rasa Forum?
+      - Wie lauten die Regeln des Rasa-Forums?
+      - Was kann eine Person im Forum machen
+      - Was machen die Leute im Rasa-Forum?
+      - Was passiert im Rasa-Forum?
+      - Was ist der Vorteil von Rasa Forum?
+      - Was ist der Zweck des Rasa-Forums?
+      - Was ist der Umfang des Rasa-Forums?
+      - Ich möchte nur den Link für die Community haben
+      - Gibt es in diesem Forum etwas Spezielles zu tun?
+      - Was genau ist das Rasa-Forum?
+      - Wofür ist dieses Forum?
+      - Erzähl mir etwas über das Forum
+      - Für welchen Bereich ist das Forum?
+      - was kann ich im forum machen
+      - Was kann ich im Forum Ihrer Community tun?
+      - Was kann ich im Forum posten?
+      - Was kann eine Person in Rasa im Forum tun?
+      - was kann man im forum machen?
+      - Was kann im Forum durchgeführt werden?
+      - was können die leute im forum machen
+      - Was können die Leute in Rasa im Forum machen?
+      - was kannst du ins forum stellen?
+      - Was machen die Leute im Forum?
+      - Was machen wir im Forum?
+      - Was macht eine Person im Rasa-Forum?
+      - Was genau ist das Forum?
+      - Wofür ist ein Rasa-Forum gedacht?
+      - Was ist das Rasa-Forum?
+      - Wofür wird das Rasa-Forum verwendet?
+      - Was ist das Forum
+      - Worum geht es im Forum?
+      - Wozu dient das Forum in Rasa?
+      - Wofür wird das Forum in Ihrer Community verwendet?
+      - Wozu dient das Forum?
+      - was ist im Forum
+      - Was ist in dem Forum?
+      - Was ist der Zweck dieses Forums
+      - was ist die Aufgabe dieses Forums
+      - Welche Themen werden in diesem Forum behandelt?
+      - Für wen ist das Forum?
+      - warum sollte ich dem Forum beitreten?
+  - intent: ask_pipeline
+    examples: |
+      - Mit welcher Pipeline soll ich beginnen?
+      - Was ist die richtige Pipeline?
+      - Womit habe ich eine gute Pipeline am Anfang?
+      - Welche Pipeline soll ich verwenden?
+      - Welche Pipeline ist besser für das, was ich will?
+      - soll ich besser mit der tensorflow pipeline oder spacy beginnen?
+      - Spacy oder Tensorflow, was ist besser, um zu beginnen?
+      - Ich weiß nicht, welche Pipeline ich verwenden soll
+      - Welche Pipeline ist besser
+      - Welche Pipeline ist besser?
+      - Rohrleitung empfehlen
+      - Pipelineempfehlung
+      - gib mir eine Empfehlung
+      - Anaconda
+  - intent: cant_help
+    examples: |
+      - Ok, dann kannst du mir nicht helfen
+      - Das war Scheiße, du hilfst nicht
+      - Du kannst mir nicht helfen
+      - Du kannst mir nicht mit dem helfen, was ich brauche
+      - Dann kannst du mir wohl nicht helfen
+      - Okay, ich glaube, du kannst mir nicht helfen
+      - das ist nicht was ich will
+      - ok, aber das hilft mir nicht
+      - Das führt zu nichts
+      - Dieses Gespräch ist nicht wirklich hilfreich
+      - Du kannst mir nicht mit dem helfen, was ich will
+      - Ich glaube nicht, dass du tun kannst, was ich will
+      - halt
+      - Hör auf zurückzugehen
+      - Hast du was?
+      - und du nennst dich bot Firma? pff
+      - und das ist es?
+      - nichts anderes?
+  - intent: human_handoff
+    examples: |
+      - Ich möchte mit einem Menschen sprechen
+      - Lass mich bitte mit einer echten Person sprechen
+      - Gibt es auch Menschen, die für Ihr Unternehmen arbeiten?
+      - Gib mir einen richtigen Menschen
+      - Ich möchte nicht mit einem Bot sprechen
+      - Kann ich mit jemandem sprechen, der mir wirklich helfen kann?
+      - Ich rede nicht gern mit einer Maschine
+      - Können Sie mich bitte mit einem echten rasa-Mitarbeiter verbinden?
+      - Gib mir jetzt einen Menschen
+      - Das ist ärgerlich. Ich möchte mit jemandem sprechen, der echt ist
+      - Ich möchte mit einer Person sprechen
+      - Kannst du mich mit einem Menschen in Kontakt bringen?
+      - Lass mich mit einem Menschen reden
+      - Ich würde gerne mit einem echten rasa-Mitarbeiter sprechen
+      - mit einem bot zu reden ist dumm
+      - Ich möchte mit jemandem sprechen, der schlauer ist als Sie
+      - Kann ich bitte mit einem Menschen sprechen?
+      - Ich würde lieber mit einem echten rasa-Mitarbeiter sprechen
+      - Ich möchte mit jemand anderem sprechen
+      - Lass mich mit einer realen Person sprechen
+      - Bitte gib mir einen Menschen
+      - Kundendienst
+      - Ich möchte mit dem Kundenservice sprechen
+      - jemand aus der Kundenbetreuung
+      - Kannst du mich an dein Team weiterleiten?
+      - Serviceagent
+      - menschliche Übergabe
+      - Gib mir einen Menschen
+      - mit einer realen Person sprechen
+      - Ich möchte mit einer realen Person sprechen
+      - Falsch, ich möchte mit einem Menschen sprechen
+      - Könnte ich mit Akela sprechen?
+      - Ich möchte mit jemandem bei Rasa sprechen
+      - Ich möchte mit den Gründern sprechen
+      - Ich bin mir nicht sicher, wie ich einen Befehl ausführen soll
+      - Ja, mein Pip wirft mir einen seltsamen Fehler
+      - Ich habe ein Problem mit Berechtigungen
+      - Kann ich mit einer Person sprechen?
+      - Kannst du mich bitte mit einem echten rasa-Mitarbeiter verbinden?
+      - Hast du menschliche Unterstützung?
+      - Ich möchte mit einem Manager sprechen
+      - Ich möchte mit Menschen sprechen
+      - Ich möchte mit jemandem sprechen, der schlauer ist als du
+      - das hilft nicht, kann ich mit Menschen sprechen?
+      - Kann ich einen Verbesserungsvorschlag einbringen?
+  - intent: good_grades_required
+    examples: |
+      - Ist der Notendurchschnitt wichtig?
+      - Brauche ich einen guten Notendurchschnitt?
+      - Brauche ich gute Noten um auf die HTL zu gehen?
+      - Brauche ich gute Noten damit ich auf die HTL gehen kann?
+      - Wie wichtig sind gute Noten?
+  - intent: prepare_for_htl
+    examples: |
+      - Wie kann man sich auf die HTL vorbereiten?
+      - Wie kann ich mich auf die HTL vorbereiten?
+      - Was muss man schon können?
+      - Was muss ich bereits können für die HTL
+      - Kann ich mich vorbereiten auf die HTL?
+      - Gibt es etwas, was ich unbedingt können muss?
+  - intent: which_branch_to_choose
+    examples: |
+      - Welchen Zweig soll ich wählen
+      - Ich kann mich nicht für einen Zweig entscheiden
+      - Welchen Zweig würdest du empfehlen
+  - intent: programming_after_first_grade
+    examples: |
+      - Was kann ich nach der ersten Klasse alles programmieren?
+      - Was kann ich nach der ersten Klasse schon?
+      - Welche Programmiersprachen lernt man am Anfang?
+      - Welche Programmiersprachen lernt man in der ersten Klasse?
+      - Kann ich nach der ersten Klasse schon programmieren?
+  - intent: girls_count_at_school
+    examples: |
+      - Wie viele Mädchen gibt es an der Schule?
+      - Gehen auch Mädchen an die HTL?
+      - Gibt es Mädchen?
+      - Gibt es viele Mädchen?
+      - Wie groß ist die Anzahl der Mädchen?
+  - intent: voluntary_subjects
+    examples: |
+      - Welche Freigegenstände gibt es?
+      - Welche zusätzlichen Fächer gibt es?
+      - Gibt es viele Freigegenstände?
+      - Kann ich auch neben der Schule andere Dinge lernen?
+      - Weißt du welche Freigegenstände es gibt?
+  - intent: average_class_size
+    examples: |
+      - Wie groß sind die Klassen für gewöhnlich?
+      - Wie groß sind die Klassen normalerweise?
+      - Wie viele Schülerinnen sind in einer Klasse?
+      - Wie viele Schüler sind in einer Klasse?
+      - Wie viele Schülerinnen und Schüler sind in einer Klasse?
+      - Weißt du wie viele Leute in einer Klasse sind?
+      - Wie viele sind in einer Klasse?
+  - intent: classes_per_grade
+    examples: |
+      - Wie viele Klassen gibt es pro Jahrgang?
+      - Wie viele neue Klassen gibt es?
+      - Wie viele unterschiedliche Klassen gibt es?
+      - Was ist die Anzahl der neuen Klassen?
+      - Wie groß ist die Anzahl der Klassen pro Jahrgang?
+  - intent: programming_languages
+    examples: |
+      - Welche Programmiersprachen lernt man an der HTL?
+      - Wie viele Programmiersprachen lernt man an der HTL?
+      - Weißt du welche Programmiersprachen man lernt?
+      - Was lernt man alles für Programmiersprachen?
+      - In welchen Sprachen kann man nach der HTL programmieren?
+  - intent: workshops_and_labours
+    examples: |
+      - Was mache ich in den Werkstätten?
+      - Was mache ich in den Labors?
+      - Wie praxisnah ist der Werkstättenunterricht?
+      - Wie praxisnah ist der Laborunterricht?
+      - Lerne ich viel in der Werkstätte?
+      - Lerne ich viel in den Labors?
+      - Mache ich viel in der Werkstätte?
+      - Mache ich viel in den Labors?
+  - intent: difference_to_other_schools
+    examples: |
+      - Was ist das besondere an dieser HTL
+      - Was ist das besondere an unserer HTL
+      - Was ist das besonder an der HTL Leonding
+      - Was ist an dieser Schule besser
+      - Warum ist die HTL Leonding am besten
+      - Was unterscheidet die HTL Leonding von anderen Schulen
+      - Was unterscheidet unsere Schule von anderen Schulen
+  - intent: social_education
+    examples: |
+      - Gibt es soziale Bildung an der HTL?
+      - Lerne ich auch etwas soziales?
+      - Gibt es auch soziale Fächer?
+      - Wie sieht es mit sozialer Bildung aus?
+      - Kann ich mich auch sozial weiterbilden?
+  - intent: economy_subject
+    examples: |
+      - Gibt es im Unterricht auch Wirtschaftsfächer?
+      - Gibt es wirtschaftliche Fächer?
+      - Wie sieht es mit dem Thema Wirtschaft aus?
+      - Wie sieht es im Unterricht mit dem Thema Wirtschaft aus?
+      - Lerne ich auch Wirtschaft an der HTL?
+  - intent: pe_for_girls
+    examples: |
+      - Was ist mit dem Turnunterricht für Mädchen?
+      - Wie läuft der Turnunterricht bei den Mädchen ab?
+      - Sind Mädchen und Jungs getrennt in Turnen?
+      - Ist der Turnunterricht für Mädchen getrennt?
+      - Gibt es einen eigenen Mädchen Turnunterricht?
+      - Wie sieht es mit dem Sportunterricht für Mädchen aus?
+      - Gibt es Sportunterricht für Frauen?
+      - Gibt es Sportunterricht für Damen?
+      - Gibt es Sportunterricht für Mädels?
+      - Was ist mit dem Turnunterricht für Frauen?
+      - Gibt es einen Frauen Turnunterricht?
+  - intent: girls_connection
+    examples: |
+      - Sind Mädchen untereinander gut vernetzt?
+      - Gibt es Aktivitäten nur für Mädchen?
+      - Gibt es Möglichkeiten für Mädchen sich auszutauschen?
+      - Kann man sich als Mädchen mit anderen austauschen?
+      - Wie kann ich mich mit anderen Mädchen zusammenreden?
+  - intent: mood_at_school
+    examples: |
+      - Wie ist das Schulklima?
+      - Wie ist das Klima an der Schule?
+      - Gibt es ein gutes Schulklima?
+      - Ist das Schulklima gut?
+      - Wie ist die Stimmung an der Schule?
+      - Ist die Stimmung an der Schule gut?
+  - intent: apply_for_school
+    examples: |
+      - Wann muss ich mich für die Schule anmelden?
+      - Bis wann muss ich mich für die HTL anmelden?
+      - Gibt es eine Anmeldefrist?
+      - Wie melde ich mich an?
+      - Wie lange kann ich mich für die HTL anmelden?
+  - intent: school_equipment
+    examples: |
+      - Was gibt es an der Schule so für Equipment?
+      - Welches Equipment hat die HTL?
+      - Über welche Ausstattung verfügt die Schule?
+      - Welche Ausstattung gibt es an der HTL?
+      - Was gibt es alles für Sachen an der HTL?
+  - intent: jobs_after_htl
+    examples: |
+      - Werde ich einen guten Beruf nach der HTL bekommen?
+      - Wie sind die Berufschancen nach der HTL?
+      - Welche Berufschancen habe ich nach der Matura?
+      - Habe ich nach der Matura gute Aussichten auf einen Beruf?
+      - Bin ich gefragt nach der Matura?
+      - Was soll ich nach der HTL machen?
+      - Bekomme ich nach der HTL einen Job?
+      - Bekomme ich nach der HTL leicht einen Job?
+      - In welchen Feldern kann ich nach der HTL arbeiten?
+      - In welchen Branchen kann ich nach der HTL arbeiten?
+  - intent: school_in_the_afternoon
+    examples: |
+      - Wie lange dauert die Schule meistens?
+      - Gibt es viel Nachmittagsunterricht?
+      - Muss ich oft länger für den Unterricht bleiben?
+      - Dauert die Schule oft bis lange in den Nachmittag?
+      - Ist es oft so, dass die HTL bis in den Nachmittag dauert?
+  - intent: internship_for_htl
+    examples: |
+      - Muss ich ein Praktikum bei der HTL machen?
+      - Wie sieht es mit dem Praktikum an der HTL aus?
+      - Wie ist das mit dem Praktikum während der HTL?
+      - Gibt es so etwas wie ein Pflichtpraktikum?
+  - intent: htl_duration
+    examples: |
+      - Wie lange dauert die HTL?
+      - Wie lange dauert es bis ich die Matura habe?
+      - Wie viele Jahre umfasst die HTL?
+      - Wie viele Jahre umfasst die Schule?
+      - Was ist die Dauer der HTL?
+  - intent: peers_at_school
+    examples: |
+      - Gibt es Vertrauenspersonen an der HTL?
+      - Gibt es Tutoren und Peers an der Schule?
+      - Wie sieht es mit Peers aus?
+      - Wie sieht es mit Tutoren aus?
+      - Sind auch Peers für die Klassen dabei?
+      - Sind auch Tutoren bei den Klassen dabei?
+  - intent: appliance_probability
+    examples: |
+      - Habe ich überhaupt eine Chance angenommen zu werden?
+      - Wie hoch ist die Chance angenommen zu werden?
+      - Wie wahrscheinlich ist es, dass ich aufgenommen werde?
+      - Wie hoch ist die Chance aufgenommen zu werden?
+      - Wie schwer ist es angenommen zu werden?
+      - Werden viele Leute auf der HTL angenommen?
+      - Wie wahrscheinlich ist es, dass man von der HTL angenommen wird?
+  - intent: equipment_needed
+    examples: |
+      - Brauche ich etwas für die HTL?
+      - Was brauche ich für die HTL?
+      - Welche Ausstattung benötige ich für die HTL?
+      - Muss ich was für die HTL kaufen?
+      - Brauche ich irgendeine Ausstattung für die HTL?
+      - Soll ich schon was für die HTL kaufen?
+  - intent: trips_during_school
+    examples: |
+      - Machen die Klassen oft Ausflüge?
+      - Gibt es oft Ausflüge?
+      - Macht man in der Schule Ausflüge?
+      - Macht man mit der Klasse Reisen?
+      - Reist man mit der Schule?
+  - intent: lunch_at_school
+    examples: |
+      - Gibt es an der HTL was zu essen?
+      - Was kann ich während der Schule essen?
+      - Ich habe Hunger wo finde ich etwas im Schulgebäude?
+      - Wo kann ich etwas in der Schule essen?
+      - Essen an der Schule
+  - intent: school_autonomous_priorities
+    examples: |
+      - Gibt es schulautonome Vertiefungen?
+      - Ist es eine Möglichkeit schulautonom sich zu vertiefen?
+      - Kann ich mich vertiefen jenseits der Schule?
+      - Kann ich neben der Schule vertiefende Sachen lernen?
+  - intent: public_transport_connection
+    examples: |
+      - Wie komme ich zur Schule?
+      - Wie lange brauche ich mit den Öffis?
+      - Gibt es eine Verkehrsanbindung zur Schule?
+      - Kann ich mit den Öffis zu Schule fahren?
+      - Fährt die Straßenbahn zur Schule?
+      - Wie sieht es mit der Verbindung zur Schule aus?
+      - Gibt es einen Bus zur Schule?
+      - Kann ich mit dem Zug anreisen?
+  - intent: what_time_is_it
+    examples: |
+      - Wie spät ist es?
+      - Kannst du mir die Uhrzeit sagen?
+      - Was ist die Uhrzeit?
+      - Wie ist die Zeit?
+      - Sag mir die Zeit!
+      - Sag mir die Uhrzeit
+      - Sag mir wie spät es ist!
+  - intent: what_date_is_it
+    examples: |
+      - Welchen Tag haben wir heute?
+      - Welches Datum ist heute?
+      - Was ist der heutige Tag?
+      - Kannst du mir sagen welchen Tag wir haben
+      - Kannst du mir das Datum sagen
+      - Kannst du mir das Datum des heutigen Tages sagen
+      - Sag mir welchen Tag wir haben
+      - Sag mir welcher Tag heute ist
+      - Sag mir das heutige Datum
+      - Sag mir das Datum
+  - synonym: Elektronik
+    examples: |
+      - Strombastler
+      - Elektrotechnik
+      - Elektrotechniker
+      - Strombastlern
+      - Höhere Elektronik
+  - synonym: Medientechnik
+    examples: |
+      - IT-Medientechnik
+      - IT Medientechnik
+      - Medientechnologie
+  - synonym: Informatik
+    examples: |
+      - IT
+      - Programmieren
+      - Programmierer
+      - Programmierzweig
+  - synonym: Medizintechnik
+    examples: |
+      - Biomedizin
+      - Biomediziner
+      - Gesundheitstechnik
+  - synonym: Fachschule
+    examples: |
+      - Fachschule Elektronik
+      - 4 jährige Schule
+      - Fachschule für Elektronik
+  - synonym: Abendschule
+    examples: |
+      - Kolleg Informatik
+  - lookup: branch
+    examples: |
+      - Medizintechnik
+      - Medientechnik
+      - Fachschule
+      - Informatik
+      - Abendschule
+      - Elektronik
