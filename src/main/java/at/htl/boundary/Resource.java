@@ -123,6 +123,25 @@ public class Resource {
         return "true";
     }
 
+    @GET
+    @RolesAllowed("user")
+    @Path("/file/{filename}")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getFile(@PathParam("filename") String filename) {
+        String[] allowedFileNames = {"nlu.yml", "rules.yml", "stories.yml", "config.yml", "domain.yml"};
+
+        if (Arrays.asList(allowedFileNames).contains(filename)) {
+            try {
+                return Response.ok(Files.readString(Paths.get(filename))).build();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return Response.status(Response.Status.INTERNAL_SERVER_ERROR).header("Reason", "Getting file failed.").build();
+            }
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).header("Reason", String.format("File %s not found", filename)).build();
+        }
+    }
+
     @PUT
     @RolesAllowed("user")
     @Path("/file/{filename}")
