@@ -1,4 +1,4 @@
-package at.htl;
+package at.htl.boundary;
 
 import at.htl.entity.Feedback;
 import at.htl.repository.FeedbackRepository;
