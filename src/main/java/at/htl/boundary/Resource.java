@@ -123,7 +123,6 @@ public class Resource {
     }
 
     @GET
-    @RolesAllowed("user")
     @Path("/file/{filename}")
     @Produces(MediaType.TEXT_PLAIN)
     public Response getFile(@PathParam("filename") String filename) {
